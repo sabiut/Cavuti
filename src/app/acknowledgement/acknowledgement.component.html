@@ -28,7 +28,8 @@
 <ListView [items]="villageData" #logginIn>
     <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
         <StackLayout>
-            <GridLayout android:useDefaultMargins="true" class="test"  columns="*, 2*" rows="2*, 3*"  height="40"  >
+            <Label class="list-province"  [text]="group.village_name"  ></Label>
+            <GridLayout android:useDefaultMargins="true" class="test"  columns="*, 80*" rows="1*, 1*"  height="50"  >
 
             <Label class="list-province"  [text]="group.village_name" col="0" row="0" ></Label>
 
