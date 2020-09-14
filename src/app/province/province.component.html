@@ -1,0 +1,52 @@
+<ActionBar>
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="TIKINA"></Label>
+    <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
+
+</ActionBar>
+
+
+    <!-- <StackLayout  *ngIf="details">
+
+        <GridLayout android:useDefaultMargins="true" class="test" columns="auto,100" rows="auto,auto" width="2000" height="30" *ngFor="let item of details.province">
+            <Label *ngIf="item"></Label>
+
+            <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0" ></Label>
+            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+        </GridLayout>
+
+
+
+    </StackLayout>  -->
+    <StackLayout *ngIf="details"; then loggedIn >
+
+    </StackLayout>
+
+
+    <ListView [items]="details" #logginIn>
+        <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout>
+                <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto" height="30"  *ngFor="let item of group.province" >
+
+                <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0" ></Label>
+
+                <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+            </GridLayout>
+        </StackLayout>>
+        </ng-template>
+    </ListView>
+
+
+
