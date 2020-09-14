@@ -17,6 +17,7 @@ export class DistrictComponent implements OnInit {
 
     districtData: ProvinceData;
 
+    // tslint:disable-next-line: max-line-length
     constructor(private districtservices: DistrictService, private route: ActivatedRoute, private router: RouterExtensions) { }
 
 

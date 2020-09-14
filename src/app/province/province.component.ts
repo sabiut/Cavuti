@@ -25,16 +25,6 @@ export class ProvinceComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    //  const id = +this.route.snapshot.params.id;
-    //  this.provinceservice.getID(id).subscribe(
-    //      (data: FijiData) => {
-    //      this.details = data;
-    //      },
-    //      (error) => console.error(error)
-
-    //  );
-
-
     this.route.paramMap.subscribe((params) =>{
         const confederancy_name: string =params.get("confederancy_name");
         this.provinceservice.getParameter(confederancy_name).subscribe(

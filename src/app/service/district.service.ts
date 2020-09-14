@@ -21,14 +21,14 @@ export class DistrictService {
 
     constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
-    getInfo(): any {
-        return this.http.get(this.url, {headers: this.headers});
-    }
+    // getInfo(): any {
+    //     return this.http.get(this.url, {headers: this.headers});
+    // }
 
 
-    getProvince(province: any){
-        return this.http.get(`${this.url}${province}/`, {headers: this.headers});
-      }
+    // getProvince(province: any){
+    //     return this.http.get(`${this.url}${province}/`, {headers: this.headers});
+    //   }
 
 
     getParameter(province: string){
@@ -37,10 +37,10 @@ export class DistrictService {
                 province_name: province
             }
         });
-        return this.http.get(this.url, {params: province_param});
+        return this.http.get(this.url, {params: province_param,  headers: this.headers});
 
     }
 
-    
+
 
 }

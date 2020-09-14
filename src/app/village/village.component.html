@@ -1,1 +1,39 @@
-<Button text="village works!" class="btn btn-primary"></Button>
+<ActionBar>
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="KORO"></Label>
+    <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
+
+</ActionBar>
+
+
+
+
+<StackLayout *ngIf="districtData"; then loggedIn >
+
+</StackLayout>
+
+
+<ListView [items]="districtData" #logginIn>
+    <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
+        <StackLayout>
+            <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto"  height="40"  *ngFor="let village of group.village" >
+
+            <Label class="list-province" [nsRouterLink]="['/district', village]" [text]="village" col="0" row="0" ></Label>
+
+            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+        </GridLayout>
+    </StackLayout>>
+    </ng-template>
+</ListView>

@@ -9,13 +9,12 @@ const routes: Routes = [
     { path: "about", loadChildren: () => import("~/app/about/about.module").then((m) => m.AboutModule) },
     { path: "featured", loadChildren: () => import("~/app/featured/featured.module").then((m) => m.FeaturedModule) },
     { path: "settings", loadChildren: () => import("~/app/settings/settings.module").then((m) => m.SettingsModule) },
-    // tslint:disable-next-line: max-line-length
-    //{path: "province/:id", loadChildren: () => import("~/app/province/province.module").then((m) => m.ProvinceModule)},
-    // tslint:disable-next-line: max-line-length
+      // tslint:disable-next-line: max-line-length
     {path: "province/:confederancy_name", loadChildren: () => import("~/app/province/province.module").then((m) => m.ProvinceModule)},
 
     // tslint:disable-next-line: max-line-length
-    {path: "district/:province", loadChildren: () => import("~/app/district/district.module").then((m) => m.DistrictModule)}
+    {path: "district/:province", loadChildren: () => import("~/app/district/district.module").then((m) => m.DistrictModule)},
+    {path: "village/:district", loadChildren: () => import("~/app/village/village.module").then((m) => m.VillageModule)}
 ];
 
 @NgModule({
