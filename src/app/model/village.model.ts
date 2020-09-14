@@ -1,4 +1,4 @@
-export class Village{
+export class VillageData{
     district: number;
     district_code: string;
     village_name: string;
@@ -10,5 +10,5 @@ export class Village{
         this.village_name = village_name;
         this.acknowledgement = acknowledgement;
     }
-    
+
 }

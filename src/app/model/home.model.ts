@@ -1,4 +1,4 @@
-import { Village } from './village.model';
+
 export class FijiData {
 
     id: number;

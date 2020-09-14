@@ -1,27 +1,26 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
-import { VillageComponent } from "./village.component";
-import { VillageRoutingModule } from "./village-routing.module";
 import { ProvincesService } from "../service/province.service";
 import { HomeMainService } from "../service/home.service";
 import { VillageServices } from "../service/village.service";
+import { AcknowkedgementService } from "../service/acknowlegement.service";
+import { AcknowledgementComponent } from "./acknowledgement.component";
+import { AcknowledementRoutingModule } from "./acknowledgement-routing.module";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        VillageRoutingModule
+        AcknowledementRoutingModule
     ],
     declarations: [
-        VillageComponent
+        AcknowledgementComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ],
     providers: [
-        ProvincesService,
-        VillageServices,
-        HomeMainService
+        AcknowkedgementService
 
   ]
 })
-export class VillageModule { }
+export class AcknowledgementModule { }

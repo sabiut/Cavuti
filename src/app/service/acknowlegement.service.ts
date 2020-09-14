@@ -1,15 +1,16 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { ActivatedRoute } from "@angular/router";
-import { DistrictData } from "../model/distric.model";
+import { AcknowkedgementData } from "../model/acknowledgement";
+
 
 @Injectable()
 
-export class VillageServices{
+export class AcknowkedgementService{
 
-    villageData: Array<DistrictData> = [];
+    villageData: Array<AcknowkedgementData> = [];
 
-    url = "https://comproject.net/districts/";
+    url = "https://comproject.net/villages";
 
 
     headers = new HttpHeaders({
@@ -20,10 +21,10 @@ export class VillageServices{
     constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
 
-    getParameter(district_name: string){
+    getParameter(village_name: string){
         const province_param = new HttpParams({
             fromObject:{
-                district_name: district_name
+                village_name: village_name
             }
         });
 

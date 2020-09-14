@@ -20,7 +20,7 @@ export class VillageComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap.subscribe((params) => {
-            const district_name: string = params.get("district_name");
+            const district_name: string = params.get("district");
             this.districtservices.getParameter(district_name).subscribe(
                         (data: DistrictData) => {
                         this.districtData = data;

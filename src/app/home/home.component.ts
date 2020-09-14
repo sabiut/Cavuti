@@ -4,7 +4,6 @@ import * as app from "tns-core-modules/application";
 import { FijiData } from "../model/home.model";
 import { RouterExtensions } from "nativescript-angular/router";
 import { HomeMainService } from "../service/home.service";
-import { Village } from '../model/village.model';
 
 
 @Component({
@@ -15,10 +14,10 @@ import { Village } from '../model/village.model';
 export class HomeComponent implements OnInit {
 
     dataList: Array<FijiData> = [];
-   
+
 
     constructor(private router: RouterExtensions, private dataservices: HomeMainService) {
-       
+
     }
 
     ngOnInit(): void {
@@ -36,6 +35,6 @@ export class HomeComponent implements OnInit {
         sideDrawer.showDrawer();
     }
 
-   
+
 
 }

@@ -12,7 +12,7 @@
     <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="KORO"></Label>
+    <Label text="I CAVUTI"></Label>
     <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
 
 </ActionBar>
@@ -20,19 +20,19 @@
 
 
 
-<StackLayout *ngIf="districtData"; then loggedIn >
+<StackLayout *ngIf="villageData"; then loggedIn >
 
 </StackLayout>
 
 
-<ListView [items]="districtData" #logginIn>
+<ListView [items]="villageData" #logginIn>
     <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
         <StackLayout>
-            <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto"  height="40"  *ngFor="let village of group.village" >
+            <GridLayout android:useDefaultMargins="true" class="test"  columns="*, 2*" rows="2*, 3*"  height="40"  >
 
-            <Label class="list-province" [nsRouterLink]="['/acknowledgement', village]" [text]="village" col="0" row="0" ></Label>
+            <Label class="list-province"  [text]="group.village_name" col="0" row="0" ></Label>
 
-            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+            <Label class ="arrow-icon" [text]="group.acknowledgement" class="fas" col="1" row="0" ></Label>
         </GridLayout>
     </StackLayout>>
     </ng-template>
