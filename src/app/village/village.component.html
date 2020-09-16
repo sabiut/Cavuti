@@ -29,14 +29,19 @@
 <ListView [items]="districtData" #logginIn>
     <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
         <StackLayout>
-            <Label class="list-province"  [text]="group.district_name" ></Label>
-            <StackLayout class="hr"></StackLayout>
-            <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto"  height="40"  *ngFor="let village of group.village" >
+            <!-- <Label class="list-province"  [text]="group.district_name" ></Label>
+            <StackLayout class="hr"></StackLayout> -->
 
-            <Label class="list-province" [nsRouterLink]="['/acknowledgement', village]" [text]="village" col="0" row="0" ></Label>
+            <ListView [items]="group.village" height="1000" width="500">
+                <ng-template let-village="item">
+            <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*"  height="50" width="500" >
 
-            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+            <Label class="list-province" [nsRouterLink]="['/acknowledgement', village]" [text]="village" col="0" row="0"  pageTransition="slideLeft" ></Label>
+
+            <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
         </GridLayout>
+        </ng-template>
+        </ListView>
     </StackLayout>>
     </ng-template>
 </ListView>

@@ -27,7 +27,7 @@
     </StackLayout>
 
     <StackLayout  col="1" row="0" >
-    <ListView [items]="details" #logginIn>
+    <!-- <ListView [items]="details" #logginIn>
         <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
             <StackLayout>
                 <Label class="list-province"  [text]="group.confederancy_name" ></Label>
@@ -40,7 +40,50 @@
             </GridLayout>
         </StackLayout>>
         </ng-template>
+    </ListView> -->
+
+
+
+    <ListView [items]="details" #logginIn >
+        <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
+
+            <StackLayout>
+                <!-- <StackLayout>
+                <Label class="list-province"  [text]="group.confederancy_name" ></Label>
+                <StackLayout class="hr"></StackLayout>
+            </StackLayout>  -->
+                <ListView [items]="group.province" height="1000" width="500">
+                <ng-template let-item="item">
+                <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*" width="500" height="50">
+
+                <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0"  pageTransition="slideLeft"></Label>
+
+                <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
+            </GridLayout>
+        </ng-template>
+        </ListView>
+        </StackLayout>>
+        </ng-template>
     </ListView>
+
+
+
+    <!-- <ListView class="list-group" [items]="details" #logginIn  height="280">
+        <ng-template let-suit="item">
+            <FlexboxLayout flexDirection="row">
+               <ScrollView orientation="horizontal">
+                        <StackLayout height="100" orientation="horizontal" margin="2.5, 15">
+                            <ListView class="list-group" [items]="suit.province">
+                                <ng-template let-card="item">
+                                    <Label [text]="card" class="card"></Label>
+                                </ng-template>
+                        </ListView>
+                    </StackLayout>
+                </ScrollView>
+
+            </FlexboxLayout>
+        </ng-template>
+    </ListView> -->
     </StackLayout>
 </GridLayout>
 
