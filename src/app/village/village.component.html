@@ -18,16 +18,18 @@
 </ActionBar>
 
 
-
-
+<GridLayout columns="auto,*" rows="*">
+    <StackLayout  col="0" row="0" >
+        <Image src="res://sideimage"  stretch="Fill" ></Image>
+    </StackLayout>
 <StackLayout *ngIf="districtData"; then loggedIn >
-
 </StackLayout>
-
-
+<StackLayout  col="1" row="0" >
 <ListView [items]="districtData" #logginIn>
     <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
         <StackLayout>
+            <Label class="list-province"  [text]="group.district_name" ></Label>
+            <StackLayout class="hr"></StackLayout>
             <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto"  height="40"  *ngFor="let village of group.village" >
 
             <Label class="list-province" [nsRouterLink]="['/acknowledgement', village]" [text]="village" col="0" row="0" ></Label>
@@ -37,3 +39,5 @@
     </StackLayout>>
     </ng-template>
 </ListView>
+</StackLayout>
+</GridLayout>

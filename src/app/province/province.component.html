@@ -17,27 +17,21 @@
 
 </ActionBar>
 
+<GridLayout columns="auto,*" rows="*">
 
-    <!-- <StackLayout  *ngIf="details">
-
-        <GridLayout android:useDefaultMargins="true" class="test" columns="auto,100" rows="auto,auto" width="2000" height="30" *ngFor="let item of details.province">
-            <Label *ngIf="item"></Label>
-
-            <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0" ></Label>
-            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
-        </GridLayout>
-
-
-
-    </StackLayout>  -->
-    <StackLayout *ngIf="details"; then loggedIn >
-
+    <StackLayout  col="0" row="0" >
+        <Image src="res://sideimage"  stretch="Fill" ></Image>
     </StackLayout>
 
+    <StackLayout *ngIf="details"; then loggedIn >
+    </StackLayout>
 
+    <StackLayout  col="1" row="0" >
     <ListView [items]="details" #logginIn>
         <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
             <StackLayout>
+                <Label class="list-province"  [text]="group.confederancy_name" ></Label>
+                <StackLayout class="hr"></StackLayout>
                 <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto" height="30"  *ngFor="let item of group.province" >
 
                 <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0" ></Label>
@@ -47,6 +41,7 @@
         </StackLayout>>
         </ng-template>
     </ListView>
-
+    </StackLayout>
+</GridLayout>
 
 

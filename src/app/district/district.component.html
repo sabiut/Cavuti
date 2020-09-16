@@ -16,20 +16,30 @@
     <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
 
 </ActionBar>
+<GridLayout columns="auto,*" rows="*">
+    <StackLayout  col="0" row="0" >
+        <Image src="res://sideimage"  stretch="Fill" ></Image>
+    </StackLayout>
 
-<StackLayout *ngIf="districtData"; then loggedIn >
+    <StackLayout *ngIf="districtData"; then loggedIn >
+    </StackLayout>
 
-</StackLayout>
+    <StackLayout  col="1" row="0" >
+    <ListView [items]="districtData" #logginIn>
+        <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
 
-<ListView [items]="districtData" #logginIn>
-    <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
-        <StackLayout>
+            <StackLayout>
+                <Label class="list-province"  [text]="group.province_name" ></Label>
+            <StackLayout class="hr"></StackLayout>
             <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto"  height="40"  *ngFor="let district of group.district" >
 
             <Label class="list-province" [nsRouterLink]="['/village', district]" [text]="district" col="0" row="0" ></Label>
 
             <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+
         </GridLayout>
     </StackLayout>>
     </ng-template>
 </ListView>
+</StackLayout>
+</GridLayout>
