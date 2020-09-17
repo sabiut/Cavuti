@@ -12,16 +12,38 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="About us"></Label>
+    <Label text="ABOUT US"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-   <Label text="About the App"></Label>
-   <StackLayout class="hr"></StackLayout>
-   <StackLayout orientation="horizontal">
-     <Label></Label>
-     <Label></Label>
-     <Label></Label>
-     <Label></Label>
-   </StackLayout>
+<GridLayout columns="auto,*" rows="*,auto">
+  <StackLayout  col="0" row="0" >
+      <Image src="res://sideimage"  stretch="Fill" ></Image>
+  </StackLayout>
+
+
+
+  <StackLayout  col="1" row="0" >
+    <StackLayout class="about-title">
+      <Label text="About the app"></Label>
+    </StackLayout>
+      <ListView  [items]="details">
+          <ng-template let-item="item">
+              <FlexboxLayout flexDirection="row">
+                  <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="50"  >
+                      <Label class="confederacy" [nsRouterLink]="['/province', item.id]" [text]= "item.title" pageTransition="slideLeft" ></Label>
+                      <Label class ="arrow-icon" text="&#xf067;" class="fas" col="1" row="0" ></Label>
+                  </GridLayout>
+              </FlexboxLayout>
+          </ng-template>
+      </ListView>
+  </StackLayout>
+
+  <StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
+     <Label text=" &#xf137;  Map View" class="fas" ></Label>
+  </StackLayout>
+  <StackLayout class ="dialogue" row="1", col="1" >
+
+      <Label text=" List View  &#xf138; " class="fas" a></Label>
+  </StackLayout>
 </GridLayout>
+

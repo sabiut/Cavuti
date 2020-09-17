@@ -3,6 +3,7 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { AboutRoutingModule } from "./about-routing.module";
 import { AboutComponent } from "./about.component";
+import { AboutService } from '../service/about.service';
 
 @NgModule({
     imports: [
@@ -14,6 +15,10 @@ import { AboutComponent } from "./about.component";
     ],
     schemas: [
         NO_ERRORS_SCHEMA
+    ],
+
+    providers:[
+     AboutService
     ]
 })
 export class AboutModule { }

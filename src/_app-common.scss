@@ -101,6 +101,29 @@
 
 }
 
+.about-button{
+    flex-direction: row;
+    width: 100;
+    justify-content: center;
+    justify-self: center;
+    justify-content: space-around;
+    padding-top: 5;
+}
+
+.contact-label{
+    font-size: 14;
+    color: maroon;
+    font-weight: bold;
+    padding-top: 10;
+    padding-left: 16;
+}
+.about-title{
+    font-size: 18;
+    font-weight: bold;
+    padding-left: 10;
+    padding-top: 20;
+    padding-bottom: 20;
+}
 
 
 

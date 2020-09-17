@@ -19,6 +19,11 @@
 <GridLayout class="page__content">
 
 <FlexboxLayout flexDirection="column">
+    <StackLayout class = "contact-label">
+
+        <Label text="Ministry of Fijian Affairs"></Label>
+
+    </StackLayout>
     <StackLayout>
         <TextField required hint="Your First Name" [(ngModel)]="textField" #element></TextField>
         <TextField required hint="Your Last Name" [(ngModel)]="textField" #element></TextField>
@@ -26,7 +31,7 @@
         <TextField required hint="Type your message here" [(ngModel)]="textField" #element></TextField>
     </StackLayout>
 
-<FlexboxLayout alignItems="center">
+<FlexboxLayout class="about-button" alignItems="center">
   <Button class="btnBack" text="Back"></Button>
   <Button class="btnSend" text ="Send"></Button>
 </FlexboxLayout>
