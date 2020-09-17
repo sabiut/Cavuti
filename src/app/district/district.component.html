@@ -13,10 +13,13 @@
         ios.position="left">
     </ActionItem>
     <Label text="YASANA"></Label>
-    <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
+
+    <ActionItem ios.position="right" os.position="right" class ="navigation" >
+        <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
+  </ActionItem>
 
 </ActionBar>
-<GridLayout columns="auto,*" rows="*">
+<GridLayout columns="auto,*" rows="*, auto">
     <StackLayout  col="0" row="0" >
         <Image src="res://sideimage"  stretch="Fill" ></Image>
     </StackLayout>
@@ -33,7 +36,7 @@
                 <Label class="list-province"  [text]="group.province_name"   ></Label>
                 <StackLayout class="hr"></StackLayout>
             </StackLayout> -->
-
+            <ScrollView orientation="horizontal">
             <ListView [items]="group.district" height="1000" width="500">
                 <ng-template let-district="item">
             <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*"  height="50" width="500" >
@@ -44,9 +47,19 @@
 
         </GridLayout>
     </ng-template>
-</ListView>
-    </StackLayout>>
+    </ListView>
+    </ScrollView>
+    </StackLayout>
     </ng-template>
 </ListView>
+</StackLayout>
+
+<StackLayout row="1", col="0" colSpan="2">
+    <SearchBar  hint="Search"
+    color="white" backgroundColor="#dad6d6"
+    textFieldHintColor="yellow"
+    textFieldBackgroundColor="white"
+    class="search-bar"
+    ></SearchBar>
 </StackLayout>
 </GridLayout>

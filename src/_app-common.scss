@@ -1,5 +1,5 @@
 @import "~@nativescript/theme/core";
-@import "~@nativescript/theme/blue";
+@import "~@nativescript/theme/ruby";
 
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
@@ -59,14 +59,14 @@
 }
 
 .btnBack{
-    background: maroon;
+    background:#9B111E;
     color: white;
     border-radius: 5;
 
 }
 .btnSend{
     border-radius: 5;
-    background: maroon;
+    background: #9B111E;
     color: white;
 }
 
@@ -77,3 +77,8 @@
 .contact{
     padding-bottom: 50;
 }
+.navigation{
+    font-size: 80;
+    font-weight: bold;
+}
+

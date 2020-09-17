@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
+
 
 @NgModule({
     bootstrap: [
@@ -20,7 +20,6 @@ import { AcknowledgementComponent } from './acknowledgement/acknowledgement.comp
     ],
     declarations: [
         AppComponent
-
 
      ],
     schemas: [

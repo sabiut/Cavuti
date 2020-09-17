@@ -1,4 +1,4 @@
-<ActionBar>
+<ActionBar >
     <!--
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
@@ -21,7 +21,9 @@
         Use the NavigationButton as a side-drawer button in Android
         because ActionItems are shown on the right side of the ActionBar
         -->
-        <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"
+        android.position="right"></NavigationButton>
+
         <!--
         Use the ActionItem for IOS with position set to left. Using the
         NavigationButton as a side-drawer button in iOS is not possible,
@@ -31,10 +33,15 @@
             ios.position="left">
         </ActionItem>
         <Label text="MATANITU"></Label>
+
+        <ActionItem ios.position="right" os.position="right" class ="navigation" >
+            <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
+      </ActionItem>
+
     </ActionBar>
 
 
-    <GridLayout columns="auto,*" rows="*">
+    <!-- <GridLayout columns="auto,*" rows="*">
         <StackLayout  col="0" row="0" >
             <Image src="res://sideimage"  stretch="Fill" ></Image>
         </StackLayout>
@@ -53,26 +60,50 @@
         </StackLayout>
       </GridLayout>
 
+      <StackLayout>
+        <ns-search></ns-search>
+    </StackLayout>
+ -->
 
-    <!-- <FlexboxLayout flexDirection="column">
-        <StackLayout  width="1000" height="100%"  class="m-15" >
-            <Image src="res://sideimage" horizontalAlignment="left" padding-left="0"></Image>
+
+
+<GridLayout columns="auto,*" rows="*,auto">
+        <StackLayout  col="0" row="0" >
+            <Image src="res://sideimage"  stretch="Fill" ></Image>
         </StackLayout>
 
-        <StackLayout >
+        <StackLayout  col="1" row="0" >
             <ListView  [items]="dataList">
                 <ng-template let-item="item">
                     <FlexboxLayout flexDirection="row">
-                        <GridLayout  columns="auto,100" rows="auto,auto" width="2000" >
+                        <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="50" >
                             <Label class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
-                            <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
+                            <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
                         </GridLayout>
                     </FlexboxLayout>
                 </ng-template>
             </ListView>
         </StackLayout>
 
-    </FlexboxLayout> -->
+
+
+        <!-- <StackLayout row="1", col="0" colSpan="2">
+            <SearchBar  hint="Search"
+            color="white" backgroundColor="#dad6d6"
+            textFieldHintColor="yellow"
+            textFieldBackgroundColor="white"
+            class="search-bar"
+            ></SearchBar>
+        </StackLayout> -->
+      </GridLayout>
+
+
+
+
+
+
+
+
 
 
 

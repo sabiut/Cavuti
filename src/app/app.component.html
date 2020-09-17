@@ -28,7 +28,7 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                     <Label col="1" text="CONTACT US" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
                     <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
                     <Label col="1" text="SEARCH" class="p-r-10"></Label>
                 </GridLayout>
@@ -43,5 +43,12 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
         </ScrollView>
     </GridLayout>
 
-    <page-router-outlet tkMainContent></page-router-outlet>
+    <page-router-outlet tkMainContent>
+
+    </page-router-outlet>
+
+
 </RadSideDrawer>
+
+
+

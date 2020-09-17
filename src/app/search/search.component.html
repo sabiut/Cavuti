@@ -1,0 +1,39 @@
+
+<ActionBar>
+
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="SEARCH"></Label>
+</ActionBar>
+
+<GridLayout class="page__content">
+
+<StackLayout>
+    <SearchBar id="searchBar" hint="Enter search term here ..." text="{{sbText}}" clear="onClear" submit="onSubmit" >
+        </SearchBar>
+</StackLayout>
+</GridLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

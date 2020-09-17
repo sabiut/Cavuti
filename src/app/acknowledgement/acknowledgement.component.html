@@ -13,7 +13,9 @@
         ios.position="left">
     </ActionItem>
     <Label text="I CAVUTI"></Label>
-    <!-- <NavigationButton android.systemIcon="ic_menu_back" ></NavigationButton> -->
+    <ActionItem ios.position="right" os.position="right" class ="navigation" >
+        <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
+  </ActionItem>
 
 </ActionBar>
 
@@ -35,10 +37,12 @@
 
             <Label class="list-province"  [text]="group.village_name" col="0" row="0" ></Label>
 
-            <Label class ="arrow-icon" [text]="group.acknowledgement" class="fas" col="1" row="0" ></Label>
+            <Label class ="arrow-icon" text="{{group.acknowledgement}}" class="fas" col="1" row="0" ></Label>
+
         </GridLayout>
     </StackLayout>>
     </ng-template>
 </ListView>
 </StackLayout>
+
 </GridLayout>
