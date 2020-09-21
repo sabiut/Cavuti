@@ -29,7 +29,7 @@
       <ListView  [items]="details">
           <ng-template let-item="item">
               <FlexboxLayout flexDirection="row">
-                  <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="50"  >
+                  <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="60"  >
                       <Label class="confederacy" [nsRouterLink]="['/province', item.id]" [text]= "item.title" pageTransition="slideLeft" ></Label>
                       <Label class ="arrow-icon" text="&#xf067;" class="fas" col="1" row="0" ></Label>
                   </GridLayout>

@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable()
 
-export class HomeMainService{
+export class HomeMainService {
 
    fijiArray: Array<FijiData> = [];
 

@@ -24,16 +24,34 @@
         <Label text="Ministry of Fijian Affairs"></Label>
 
     </StackLayout>
-    <StackLayout>
-        <TextField required hint="Your First Name" [(ngModel)]="textField" #element></TextField>
-        <TextField required hint="Your Last Name" [(ngModel)]="textField" #element></TextField>
-        <TextField required hint="Your Email" [(ngModel)]="textField" #element></TextField>
-        <TextField required hint="Type your message here" [(ngModel)]="textField" #element></TextField>
+    <StackLayout >
+        <TextField hint = "Your First Name" returnKeyType="next"  required ngModel #fname ="ngModel"></TextField>
+        <label
+        *ngIf ="!fname.valid && fname.touched"
+        text ="Please enter a valid first name"></label>
+
+        <TextField hint="Your Last Name" required ngModel #lname ="ngModel"></TextField>
+        <label
+        *ngIf ="!lname.valid && lname.touched"
+        text ="Please enter a valid last name"></label>
+
+        <TextField hint="Your Email"  keyboardType="email"  required ngModel #email="ngModel"></TextField>
+        <label
+        *ngIf ="!email.valid && email.touched"
+        text ="Please enter a valid email address"></label>
+
+        <TextView hint="Type your message here"  returnKeyType="done" required ngModel #message="ngModel"></TextView>
+        <label *ngIf ="!message.valid && message.touched"
+        text ="Please enter a valid message"></label>
+
     </StackLayout>
+
+
+
 
 <FlexboxLayout class="about-button" alignItems="center">
   <Button class="btnBack" text="Back"></Button>
-  <Button class="btnSend" text ="Send"></Button>
+  <Button class="btnSend" text ="Send" [isEnabled] ="fname.valid && lname.valid && email.valid && message.valid" (tap)="newContact(fname.value, lname.value, email.value,message.value)"></Button>
 </FlexboxLayout>
 
 </FlexboxLayout>

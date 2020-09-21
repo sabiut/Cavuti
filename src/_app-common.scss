@@ -84,11 +84,10 @@
 }
 
 .dialogue1{
-    padding-top: 15;
+
     background-color:#9B111E;
-    height: 50;
     color: white;
-    padding-left: 20;
+
 
 }
 
@@ -126,5 +125,8 @@
 }
 
 
-
+.ng-invalid.ng-touched{
+    border-bottom-color: red;
+    color: red;
+}
 

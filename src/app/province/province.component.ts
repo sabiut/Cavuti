@@ -18,6 +18,7 @@ import { filter } from 'rxjs/operators';
 export class ProvinceComponent implements OnInit {
 
   details: FijiData;
+  //province: string;
 
   constructor(private route: ActivatedRoute, private router: RouterExtensions,
               private provinceservice: ProvincesService) {
@@ -26,20 +27,31 @@ export class ProvinceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) =>{
-        const confederancy_name: string =params.get("confederancy_name");
+        const confederancy_name: string = params.get("confederancy_name");
         this.provinceservice.getParameter(confederancy_name).subscribe(
                     (data: FijiData) => {
                     this.details = data;
                     console.log(confederancy_name);
                     },
                     (error) => console.error(error)
-                    )
-        })
-
-
-
+                    );
+        });
 
   }
+
+//   Search(){
+//     if (this.province ! = ""){
+//         this.details = this.details.filter((res) => {
+//             for( const test of res.province){
+//             return test.toLowerCase().match(this.province.toLowerCase());
+//             }
+//         })
+
+//     } else if(this.province == ""){
+//         this.ngOnInit();
+//     }
+
+//   }
 
 
   onDrawerButtonTap(): void {
