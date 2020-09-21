@@ -3,8 +3,7 @@ import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { ContactData } from "../model/contact";
 import { ContactServices } from "../service/contact.service";
-import { RouterExtensions } from 'nativescript-angular/router';
-import { Router } from "@angular/router";
+import { RouterExtensions } from "nativescript-angular/router";
 import { ActivatedRoute } from "@angular/router";
 import { FormControl, FormGroup } from "@angular/forms";
 
@@ -29,11 +28,16 @@ export class ContactComponent implements OnInit {
     newContact(firstName: string, lastName: string, email: string, message: string){
         this.contactservices.submitContact(firstName, lastName,
             email, message).subscribe(
-            (_result) => this.router.navigate(["/home"]),
+            (_result) => this.router.navigate(["/message"]),
             (error) => console.log(error)
             );
 
     }
+
+    onGoBack(){
+        this.router.backToPreviousPage();
+    }
+
 
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();

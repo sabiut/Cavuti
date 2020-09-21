@@ -4,6 +4,7 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { ContactRoutingModule } from "./contact-routing.module";
 import { ContactComponent } from "./contact.component";
 import { ContactServices } from '../service/contact.service';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContactServices } from '../service/contact.service';
 
     ],
     declarations: [
-        ContactComponent
+        ContactComponent,
+
     ],
     schemas: [
         NO_ERRORS_SCHEMA

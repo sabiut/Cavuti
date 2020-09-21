@@ -1,14 +1,16 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { ContactComponent } from "./contact.component";
+import { MessageComponent } from "./message.component";
 
 const routes: Routes = [
-    { path: "", component: ContactComponent }
+
+        {path: "", component: MessageComponent}
+
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class ContactRoutingModule { }
+export class MessageRoutingModule { }

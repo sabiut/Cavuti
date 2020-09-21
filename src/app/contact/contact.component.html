@@ -13,11 +13,20 @@
         ios.position="left">
     </ActionItem>
     <Label text="CONTACT US"></Label>
+
+    <ActionItem ios.position="right" os.position="right" class ="navigation" >
+        <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
+  </ActionItem>
 </ActionBar>
 
 
 <GridLayout class="page__content">
+    <GridLayout columns="auto,*" rows="*,auto">
+        <StackLayout  col="0" row="0" >
+            <Image src="res://sideimage"  stretch="Fill" ></Image>
+        </StackLayout>
 
+<StackLayout  col="1" row="0" >
 <FlexboxLayout flexDirection="column">
     <StackLayout class = "contact-label">
 
@@ -46,13 +55,23 @@
 
     </StackLayout>
 
-
-
-
 <FlexboxLayout class="about-button" alignItems="center">
-  <Button class="btnBack" text="Back"></Button>
+  <Button class="btnBack" text="Back" (tap) = "onGoBack()"></Button>
   <Button class="btnSend" text ="Send" [isEnabled] ="fname.valid && lname.valid && email.valid && message.valid" (tap)="newContact(fname.value, lname.value, email.value,message.value)"></Button>
 </FlexboxLayout>
 
 </FlexboxLayout>
+
+</StackLayout>
+
+<StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
+    <Label  class="fas" ></Label>
+ </StackLayout>
+ <StackLayout class ="dialogue" row="1", col="1" >
+
+     <Label   class="fas" a></Label>
+ </StackLayout>
+
+
+</GridLayout>
 </GridLayout>

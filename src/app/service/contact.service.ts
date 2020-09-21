@@ -18,15 +18,10 @@ export class ContactServices{
 
     constructor(private http: HttpClient) { }
 
-//     submitContact(first_name: string, last_name: string, email: string, message: string){
-//         const body = JSON.stringify({first_name, last_name, email, message});
-
-//         return this.http.post<ContactData>(this.url, body, {headers: this.headers});
-
-// }
 
     submitContact(first_name: string, last_name: string, email: string, message: string){
         const body = JSON.stringify({first_name, last_name, email, message});
+
         return this.http.post<ContactData>(this.url, body, {headers: this.headers});
 }
 }
