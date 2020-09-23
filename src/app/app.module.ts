@@ -8,6 +8,7 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 import { FormsModule } from "@angular/forms";
+import { VosaComponent } from './vosa/vosa.component';
 
 
 
@@ -27,6 +28,7 @@ import { FormsModule } from "@angular/forms";
     ],
     declarations: [
         AppComponent
+
 
      ],
     schemas: [

@@ -19,7 +19,8 @@ const routes: Routes = [
     // tslint:disable-next-line: max-line-length
     {path: "acknowledgement/:village", loadChildren: () => import("~/app/acknowledgement/acknowledgement.module").then((m) => m.AcknowledgementModule)},
     {path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule)},
-    {path: "message", loadChildren: () => import("~/app/contact/message/message.module").then((m) => m.MessageModule)}
+    {path: "message", loadChildren: () => import("~/app/contact/message/message.module").then((m) => m.MessageModule)},
+    {path: "vosa", loadChildren: () => import("~/app/vosa/vosa.module").then((m) => m.VosaModule)}
 ];
 
 @NgModule({

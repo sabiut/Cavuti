@@ -33,7 +33,7 @@
         <Label text="Ministry of Fijian Affairs"></Label>
 
     </StackLayout>
-    <StackLayout >
+    <StackLayout class ="contact-form">
         <TextField hint = "Your First Name" returnKeyType="next"  required ngModel #fname ="ngModel"></TextField>
         <label
         *ngIf ="!fname.valid && fname.touched"

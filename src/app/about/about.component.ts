@@ -1,3 +1,6 @@
+
+import { EventData } from "tns-core-modules/data/observable";
+import { Switch } from "tns-core-modules/ui/switch";
 import { Component, OnInit } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
@@ -32,6 +35,15 @@ export class AboutComponent implements OnInit {
     toggle(item: AboutData) {
         item.visible = !item.visible;
 
+    }
+    onCheckedChange(args: EventData) {
+        let sw = args.object as Switch;
+        let isChecked = sw.checked; // boolean
+        if (!isChecked) {
+            this.router.navigate(["/about"]);
+        } else {
+            this.router.navigate(["/vosa"]);
+        }
     }
 
     onDrawerButtonTap(): void {
