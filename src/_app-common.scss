@@ -56,6 +56,8 @@
 
 .confederacy{
     align-content: center;
+    justify-content: space-around;
+    padding-right: 10;
 }
 
 .btnBack{
@@ -83,20 +85,32 @@
     height: 50;
 }
 
-.dialogue1{
-
+.about-left{
+    padding-top: 15;
     background-color:#9B111E;
     color: white;
+    padding-left: 30;
 
 
 }
 
-.dialogue{
+.about-center{
+
+    background-color:#9B111E;
+    height: 50;
+    color: white;
+    padding-right: 1;
+
+
+
+}
+
+.about-right{
     padding-top: 15;
     background-color:#9B111E;
     height: 50;
     color: white;
-    padding-left: 200;
+    padding-left: 55;
 
 }
 
@@ -123,6 +137,13 @@
     padding-top: 20;
     padding-bottom: 20;
 }
+.about-list{
+    padding-right: 30;
+
+}
+.about-icon{
+    padding-left: 70;
+}
 
 
 .ng-invalid.ng-touched{
@@ -135,4 +156,22 @@
   font-size: 14;
   orientation: horizontal;
   padding-left: 20;
+}
+
+.bottom-left{
+    height:50;
+    background-color:#9B111E;
+    color: white;
+
+
+
+}
+
+.bottom-right{
+    height:50;
+    background-color:#9B111E;
+    color: white;
+
+
+
 }

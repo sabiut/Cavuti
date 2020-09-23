@@ -29,6 +29,11 @@ export class AboutComponent implements OnInit {
 
     }
 
+    toggle(item: AboutData) {
+        item.visible = !item.visible;
+
+    }
+
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();

@@ -41,7 +41,7 @@
                 <ng-template let-district="item">
             <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*"  height="50" width="500" >
 
-            <Label class="list-province" [nsRouterLink]="['/village', district]" [text]="district" col="0" row="0"  pageTransition="slideLeft"></Label>
+            <Label class="list-province" [nsRouterLink]="['/village', district]" [text]="district" col="0" row="0"  pageTransition="slideRight"></Label>
 
             <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
 
@@ -63,11 +63,11 @@
     ></SearchBar>
 </StackLayout> -->
 
-<StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
-    <Label text=" &#xf137;  Map View" class="fas" ></Label>
+<StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
+    <Label class="fas" ></Label>
  </StackLayout>
- <StackLayout class ="dialogue" row="1", col="1" >
+ <StackLayout class ="bottom-right" row="1", col="1" >
 
-     <Label text=" List View  &#xf138; " class="fas" a></Label>
+     <Label  class="fas" ></Label>
  </StackLayout>
 </GridLayout>

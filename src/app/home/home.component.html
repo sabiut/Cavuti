@@ -67,7 +67,7 @@
 
 
 
-<GridLayout columns="auto,*" rows="*,auto">
+<GridLayout columns="auto,1*,1*" rows="*,auto">
         <StackLayout  col="0" row="0" >
             <Image src="res://sideimage"  stretch="Fill" ></Image>
         </StackLayout>
@@ -77,7 +77,7 @@
                 <ng-template let-item="item">
                     <FlexboxLayout flexDirection="row">
                         <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="50" >
-                            <Label class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
+                            <Label col ="0" row ="0" class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideRight" ></Label>
                             <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
                         </GridLayout>
                     </FlexboxLayout>
@@ -85,6 +85,16 @@
             </ListView>
         </StackLayout>
 
+        <StackLayout class ="about-left" row="1", col="0"  alignItems="right" >
+            <Label text="Map View" class="fas" ></Label>
+         </StackLayout>
+         <StackLayout class ="about-center" row="1", col="1" >
+           <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
+         </StackLayout>
+
+         <StackLayout class ="about-right" row="1", col="2" >
+           <Label text=" List View " class="fas"></Label>
+       </StackLayout>
     <!-- <ScrollableView>
         <StackLayout row="1", col="0" colSpan="2">
             <SearchBar  hint="Search"
