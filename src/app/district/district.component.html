@@ -18,8 +18,70 @@
         <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
   </ActionItem>
 
+  <ActionItem ios.position="right" os.position="right" class ="navigation" >
+    <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
+</ActionItem>
+
 </ActionBar>
-<GridLayout columns="auto,*" rows="*, auto">
+
+<GridLayout cplumns="1*,*" rows="*,60">
+    <StackLayout  col="0" row="0" >
+      <Image src="res://sideimage"  stretch="Fill" ></Image>
+  </StackLayout>
+
+    <StackLayout *ngIf="districtData"; then loggedIn >
+    </StackLayout>
+
+          <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
+          <GridLayout>
+            <ListView [items]="districtData" #logginIn >
+            <ng-template let-group="item" >
+                <StackLayout>
+                <ScrollView orientation="vertical">
+                <ListView [items]="group.district" height="900">
+                    <ng-template let-district="item">
+                        <GridLayout class="list-group-item" columns="1*, 1*" width="500">
+                            <Label  col ="0" [nsRouterLink]="['/village', district]" [text]= "district" pageTransition="slideleft" ></Label>
+                            <Label  text="&#xf054;" class="fas" col="1" ></Label>
+
+                        </GridLayout>
+                    </ng-template>
+                </ListView>
+                </ScrollView>
+                </StackLayout>
+                </ng-template>
+                </ListView>
+            </GridLayout>
+          </FlexboxLayout>
+
+    <StackLayout row="1" orientation="horizontal">
+        <ScrollableView>
+      <GridLayout columns="auto,auto,auto" >
+        <label col ="0" class="search-left" ></label>
+        <StackLayout class ="search-center"  col="1" >
+            <SearchBar  hint="Search Yasana"
+            color="black" backgroundColor="#dad6d6"
+            textFieldHintColor="yellow"
+            textFieldBackgroundColor="white"
+
+            ></SearchBar>
+        </StackLayout>
+        <label col ="2" class ="search-right" ></label>
+      </GridLayout>
+    </ScrollableView>
+    </StackLayout>
+  </GridLayout>
+
+
+
+
+
+
+
+
+
+<!--Test Below-->
+<!-- <GridLayout columns="auto,*" rows="*, auto">
     <StackLayout  col="0" row="0" >
         <Image src="res://sideimage"  stretch="Fill" ></Image>
     </StackLayout>
@@ -31,12 +93,12 @@
     <ListView [items]="districtData" #logginIn>
         <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
 
-            <StackLayout>
-                <!-- <StackLayout>
-                <Label class="list-province"  [text]="group.province_name"   ></Label>
+            <StackLayout>-->
+                <!-- <StackLayout> -->
+                <!-- <Label class="list-province"  [text]="group.province_name"   ></Label>
                 <StackLayout class="hr"></StackLayout>
-            </StackLayout> -->
-            <ScrollView orientation="horizontal">
+            </StackLayout> --> -->
+            <!-- <ScrollView orientation="horizontal">
             <ListView [items]="group.district" height="1000" width="500">
                 <ng-template let-district="item">
             <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*"  height="50" width="500" >
@@ -52,7 +114,7 @@
     </StackLayout>
     </ng-template>
 </ListView>
-</StackLayout>
+</StackLayout> -->
 
 <!-- <StackLayout row="1", col="0" colSpan="2">
     <SearchBar  hint="Search"
@@ -63,11 +125,11 @@
     ></SearchBar>
 </StackLayout> -->
 
-<StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
+<!-- <StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
     <Label class="fas" ></Label>
  </StackLayout>
  <StackLayout class ="bottom-right" row="1", col="1" >
 
      <Label  class="fas" ></Label>
  </StackLayout>
-</GridLayout>
+</GridLayout> -->

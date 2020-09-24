@@ -16,10 +16,63 @@
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
   </ActionItem>
+  <ActionItem ios.position="right" os.position="right" class ="navigation" >
+    <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
+</ActionItem>
 
 </ActionBar>
 
-<GridLayout columns="auto,*" rows="*,auto">
+<GridLayout cplumns="1*,*" rows="*,60">
+    <StackLayout  col="0" row="0" >
+      <Image src="res://sideimage"  stretch="Fill" ></Image>
+  </StackLayout>
+
+    <StackLayout *ngIf="details"; then loggedIn >
+    </StackLayout>
+
+          <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
+          <GridLayout>
+            <ListView [items]="details" #logginIn >
+            <ng-template let-group="item" >
+                <StackLayout>
+                <ScrollView orientation="vertical">
+                <ListView [items]="group.province" height="900">
+                    <ng-template let-item="item">
+                        <GridLayout class="list-group-item" columns="1*, 1*" width="500">
+                            <Label  col ="0" [nsRouterLink]="['/district', item]" [text]= "item" pageTransition="slideleft" ></Label>
+                            <Label  text="&#xf054;" class="fas" col="1" ></Label>
+
+                        </GridLayout>
+                    </ng-template>
+                </ListView>
+                </ScrollView>
+                </StackLayout>
+                </ng-template>
+                </ListView>
+            </GridLayout>
+          </FlexboxLayout>
+
+    <StackLayout row="1" orientation="horizontal">
+      <GridLayout columns="auto, auto, auto" >
+        <label col ="0" class="ab-left" text="Map View"></label>
+        <StackLayout class ="ab-center"  col="1" >
+          <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
+        </StackLayout>
+        <label col ="2" class ="ab-right" text="List View"></label>
+      </GridLayout>
+    </StackLayout>
+  </GridLayout>
+
+
+
+
+
+
+
+
+
+<!--Testing Below-->
+<!-- <GridLayout columns="auto,*" rows="*,auto">
 
     <StackLayout  col="0" row="0" >
         <Image src="res://sideimage"  stretch="Fill" ></Image>
@@ -29,20 +82,6 @@
     </StackLayout>
 
     <StackLayout  col="1" row="0" >
-    <!-- <ListView [items]="details" #logginIn>
-        <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
-            <StackLayout>
-                <Label class="list-province"  [text]="group.confederancy_name" ></Label>
-                <StackLayout class="hr"></StackLayout>
-                <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="auto,auto" height="30"  *ngFor="let item of group.province" >
-
-                <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0" ></Label>
-
-                <Label class ="arrow-icon" text="&#xf0a9;" class="fas" col="1" row="0" ></Label>
-            </GridLayout>
-        </StackLayout>>
-        </ng-template>
-    </ListView> -->
 
 
 
@@ -50,10 +89,7 @@
         <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
 
             <StackLayout>
-                <!-- <StackLayout>
-                <Label class="list-province"  [text]="group.confederancy_name" ></Label>
-                <StackLayout class="hr"></StackLayout>
-            </StackLayout>  -->
+
              <ScrollView orientation="horizontal">
                 <ListView [items]="group.province" height="1000" width="500">
                 <ng-template let-item="item">
@@ -77,7 +113,7 @@
      <StackLayout class ="bottom-right" row="1", col="1" >
 
          <Label  class="fas" ></Label>
-     </StackLayout>
+     </StackLayout> -->
        <!-- <StackLayout row="1", col="0" colSpan="2">
             <SearchBar  hint="Search"
             color="white" backgroundColor="#dad6d6"
@@ -106,6 +142,6 @@
             </StackLayout>
         </ScrollableView> -->
 
-</GridLayout>
+<!-- </GridLayout> -->
 
 

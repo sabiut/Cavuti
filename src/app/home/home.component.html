@@ -41,33 +41,53 @@
     </ActionBar>
 
 
-    <!-- <GridLayout columns="auto,*" rows="*">
+    <GridLayout cplumns="1*,*" rows="*,60">
         <StackLayout  col="0" row="0" >
-            <Image src="res://sideimage"  stretch="Fill" ></Image>
-        </StackLayout>
+          <Image src="res://sideimage"  stretch="Fill" ></Image>
+      </StackLayout>
 
-        <StackLayout  col="1" row="0" >
-            <ListView  [items]="dataList">
+              <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
+              <GridLayout>
+                <ListView [items]="dataList">
                 <ng-template let-item="item">
-                    <FlexboxLayout flexDirection="row">
-                        <GridLayout   columns="1*, 1*" rows="1*,1*"  width="500" height="50" >
-                            <Label class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
-                            <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
-                        </GridLayout>
-                    </FlexboxLayout>
+                    <GridLayout class="list-group-item" columns="*,auto">
+                       <Label col ="0"  class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
+                       <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1"  ></Label>
+
+                    </GridLayout>
                 </ng-template>
-            </ListView>
+                </ListView>
+                </GridLayout>
+              </FlexboxLayout>
+
+        <StackLayout row="1" orientation="horizontal">
+          <GridLayout columns="auto, auto, auto" >
+            <label col ="0" class="ab-left" text="Map View"></label>
+            <StackLayout class ="ab-center"  col="1" >
+              <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
+            </StackLayout>
+            <label col ="2" class ="ab-right" text="List View"></label>
+          </GridLayout>
         </StackLayout>
       </GridLayout>
 
-      <StackLayout>
-        <ns-search></ns-search>
-    </StackLayout>
- -->
 
 
 
-<GridLayout columns="auto,1*,1*" rows="*,auto">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Test is below-->
+<!-- <GridLayout columns="auto,1*,1*" rows="*,auto">
         <StackLayout  col="0" row="0" >
             <Image src="res://sideimage"  stretch="Fill" ></Image>
         </StackLayout>
@@ -113,7 +133,7 @@
 
             <Label text=" List View  &#xf138; " class="fas" a></Label>
         </StackLayout> -->
-      </GridLayout>
+      <!--</GridLayout> -->
 
 
 

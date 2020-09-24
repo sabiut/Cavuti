@@ -100,9 +100,6 @@
     height: 50;
     color: white;
     padding-right: 1;
-
-
-
 }
 
 .about-right{
@@ -137,7 +134,7 @@
 .about-title{
     font-size: 18;
     font-weight: bold;
-    padding-left: 60;
+    padding-left: 80;
     padding-top: 5;
     justify-content: center;
 
@@ -180,6 +177,10 @@
 
 }
 
+.list-group-item{
+    padding-right: 2;
+}
+
 
 
 .ng-invalid.ng-touched{
@@ -213,6 +214,28 @@
 }
 
 .about-list{
-    padding-left: 50;
+    padding-left: 70;
     padding-top: 50;
+}
+
+
+.district-search{
+    background-color: #9B111E;
+    padding-left: 95;
+    justify-items: center;
+    justify-content: center;
+}
+
+.search-left{
+    background-color: #9B111E;
+    padding-left: 50;
+
+}
+.search-center{
+    background-color: #9B111E;
+    padding-top: 6;
+}
+.search-right{
+    background-color: #9B111E;
+    padding-left: 50;
 }
