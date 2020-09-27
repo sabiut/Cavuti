@@ -1,4 +1,4 @@
-<ActionBar>
+<ActionBar class="actionbar">
     <!--
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
@@ -37,7 +37,7 @@
             <ListView [items]="districtData" #logginIn >
             <ng-template let-group="item" >
                 <StackLayout>
-                <ScrollView orientation="vertical">
+
                 <ListView [items]="group.district" height="900">
                     <ng-template let-district="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="500">
@@ -47,7 +47,7 @@
                         </GridLayout>
                     </ng-template>
                 </ListView>
-                </ScrollView>
+
                 </StackLayout>
                 </ng-template>
                 </ListView>
@@ -55,7 +55,7 @@
           </FlexboxLayout>
 
     <StackLayout row="1" orientation="horizontal">
-        <ScrollableView>
+
       <GridLayout columns="auto,auto,auto" >
         <label col ="0" class="search-left" ></label>
         <StackLayout class ="search-center"  col="1" >
@@ -68,7 +68,7 @@
         </StackLayout>
         <label col ="2" class ="search-right" ></label>
       </GridLayout>
-    </ScrollableView>
+
     </StackLayout>
   </GridLayout>
 

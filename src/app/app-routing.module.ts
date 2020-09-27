@@ -3,7 +3,7 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/home", pathMatch: "full" },
+    { path: "", redirectTo: "/first-splash", pathMatch: "full" },
     { path: "home", loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule) },
     { path: "contact", loadChildren: () => import("~/app/contact/contact.module").then((m) => m.ContactModule) },
     { path: "about", loadChildren: () => import("~/app/about/about.module").then((m) => m.AboutModule) },
@@ -20,7 +20,9 @@ const routes: Routes = [
     {path: "acknowledgement/:village", loadChildren: () => import("~/app/acknowledgement/acknowledgement.module").then((m) => m.AcknowledgementModule)},
     {path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule)},
     {path: "message", loadChildren: () => import("~/app/contact/message/message.module").then((m) => m.MessageModule)},
-    {path: "vosa", loadChildren: () => import("~/app/vosa/vosa.module").then((m) => m.VosaModule)}
+    {path: "vosa", loadChildren: () => import("~/app/vosa/vosa.module").then((m) => m.VosaModule)},
+    {path: "first-splash", loadChildren: () => import("~/app/splach/splach.module").then((m) => m.SplachModule)},
+    {path: "second-splash", loadChildren: () => import("~/app/splach/second-splash/second-splash.module").then((m) => m.SecondSplashModule)}
 ];
 
 @NgModule({

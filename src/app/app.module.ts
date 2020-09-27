@@ -9,6 +9,7 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 import { FormsModule } from "@angular/forms";
 import { VosaComponent } from './vosa/vosa.component';
+import { SplachComponent } from './splach/splach.component';
 
 
 
@@ -28,8 +29,6 @@ import { VosaComponent } from './vosa/vosa.component';
     ],
     declarations: [
         AppComponent
-
-
      ],
     schemas: [
         NO_ERRORS_SCHEMA

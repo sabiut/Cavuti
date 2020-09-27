@@ -3,9 +3,9 @@ RadSideDrawer is a UI component part of the Progress NativeScript UI set of comp
 Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
 https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
 -->
-<RadSideDrawer [drawerTransition]="sideDrawerTransition">
-    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
-        <StackLayout row="0" class="nt-drawer__header">
+<RadSideDrawer   [drawerTransition]="sideDrawerTransition" >
+    <GridLayout  tkDrawerContent rows="auto, *" class="nt-drawer__content">
+        <StackLayout row="0" class="nt-drawer__header" class ="actionbar">
             <Image class="nt-drawer__header-image fas t-36" src="font://&#xf508;"></Image>
             <Label class="nt-drawer__header-brand" text=""></Label>
             <!-- <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label> -->
@@ -43,7 +43,7 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
         </ScrollView>
     </GridLayout>
 
-    <page-router-outlet tkMainContent>
+    <page-router-outlet tkMainContent >
 
     </page-router-outlet>
 

@@ -9,7 +9,7 @@ import * as app from "tns-core-modules/application";
     selector: "ns-app",
     templateUrl: "app.component.html",
     moduleId: module.id
-    
+
 })
 export class AppComponent implements OnInit {
     private _activatedUrl: string;
