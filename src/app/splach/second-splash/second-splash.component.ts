@@ -10,14 +10,12 @@ import { RouterExtensions } from "nativescript-angular/router";
 })
 export class SecondSplashComponent implements OnInit {
 
-    private timeSplash = 0;
-    private count =  0;
     constructor(private router: RouterExtensions) { }
 
     ngOnInit(): void {
             setTimeout(() => {
-            this.router.navigate(["/home"], {clearHistory: true});
-          },6000);
+            this.router.navigate(["/third-splash"], {clearHistory: true});
+          }, 6000);
 
           }
 

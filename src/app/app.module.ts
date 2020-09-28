@@ -5,13 +5,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { FormsModule } from "@angular/forms";
-import { VosaComponent } from './vosa/vosa.component';
-import { SplachComponent } from './splach/splach.component';
-
-
 
 @NgModule({
     bootstrap: [

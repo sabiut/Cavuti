@@ -1,17 +1,15 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
-import { SplachRoutingModule } from "./splach-routing.module";
-import { SplachComponent } from "./splach.component";
+import { ThirdSplachRoutingModule } from "./third-splash-routing.module";
+import { ThirdSplashComponent } from "./third-splash.component";
 
 @NgModule({
     imports: [
        NativeScriptCommonModule,
-       SplachRoutingModule
+       ThirdSplachRoutingModule
     ],
     declarations: [
-        SplachComponent
-       
-
+        ThirdSplashComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
@@ -21,4 +19,4 @@ import { SplachComponent } from "./splach.component";
 
   ]
 })
-export class SplachModule { }
+export class ThirdSplashModule { }

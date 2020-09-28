@@ -27,9 +27,7 @@ export class AboutComponent implements OnInit {
 
     ngOnInit(): void {
         this.details = this.aboutservice.getAbout();
-        //const id = +this.route.snapshot.params.id;
-        //this.details = this.aboutservice.getAboutID(id);
-
+   
     }
 
     toggle(item: AboutData) {

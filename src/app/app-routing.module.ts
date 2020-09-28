@@ -22,7 +22,10 @@ const routes: Routes = [
     {path: "message", loadChildren: () => import("~/app/contact/message/message.module").then((m) => m.MessageModule)},
     {path: "vosa", loadChildren: () => import("~/app/vosa/vosa.module").then((m) => m.VosaModule)},
     {path: "first-splash", loadChildren: () => import("~/app/splach/splach.module").then((m) => m.SplachModule)},
-    {path: "second-splash", loadChildren: () => import("~/app/splach/second-splash/second-splash.module").then((m) => m.SecondSplashModule)}
+    // tslint:disable-next-line: max-line-length
+    {path: "second-splash", loadChildren: () => import("~/app/splach/second-splash/second-splash.module").then((m) => m.SecondSplashModule)},
+    // tslint:disable-next-line: max-line-length
+    {path: "third-splash", loadChildren: () => import("~/app/splach/third-splash/third-splash.module").then((m) => m.ThirdSplashModule)}
 ];
 
 @NgModule({
