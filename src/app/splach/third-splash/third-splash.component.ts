@@ -4,6 +4,8 @@ import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { EventData } from "tns-core-modules/data/observable";
 import { Switch } from "tns-core-modules/ui/switch";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+
 
 @Component({
   selector: "ns-third-splash",
@@ -16,10 +18,12 @@ export class ThirdSplashComponent implements OnInit {
   constructor(private router: RouterExtensions) {}
 
   ngOnInit(): void {
-      setTimeout(() => {
-          //this.router.navigate(["/home"]);
-          
-      }, 6000);
+    dialogs.alert({
+        message: "Explore ICavuti through our map view. You can switch between each view using this switch.",
+        okButtonText: "OK"
+    }).then(() => {
+        console.log("Dialog closed!");
+    });
   }
 
   onDrawerButtonTap(): void {
