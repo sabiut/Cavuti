@@ -30,8 +30,7 @@
     <StackLayout *ngIf="details"; then loggedIn >
     </StackLayout>
 
-          <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
-          <GridLayout>
+          <FlexboxLayout class ="list-content"  flexDirection="row">
             <ListView [items]="details" #logginIn >
             <ng-template let-group="item" >
                 <StackLayout>
@@ -49,7 +48,7 @@
                 </StackLayout>
                 </ng-template>
                 </ListView>
-            </GridLayout>
+
           </FlexboxLayout>
 
     <StackLayout row="1" orientation="horizontal">

@@ -20,49 +20,52 @@
 
 </ActionBar>
 
-<GridLayout columns="auto,*" rows="*,auto">
+
+<GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
-        <Image src="res://sideimage"  stretch="Fill" ></Image>
+      <Image src="res://sideimage"  stretch="Fill" ></Image>
+  </StackLayout>
+
+    <StackLayout *ngIf="districtData"; then loggedIn >
     </StackLayout>
 
-<StackLayout *ngIf="districtData"; then loggedIn >
-</StackLayout>
+          <FlexboxLayout  class="list-content" flexDirection="row">
 
-<StackLayout  col="1" row="0" >
-<ListView [items]="districtData" #logginIn>
-    <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
-        <StackLayout>
-            <!-- <Label class="list-province"  [text]="group.district_name" ></Label>
-            <StackLayout class="hr"></StackLayout> -->
-            <ScrollView orientation="horizontal">
-            <ListView [items]="group.village" height="1000" width="500">
-                <ng-template let-village="item">
-            <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*"  height="50" width="500" >
+            <ListView [items]="districtData" #logginIn >
+            <ng-template let-group="item" >
+                <ScrollView orientation="horizontal">
+                <ListView [items]="group.village" height="1000">
+                    <ng-template let-village="item">
+                        <GridLayout class="list-group-item" columns="1*, 1*" width="500">
+                            <Label  col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
+                            <Label  text="&#xf054;" class="fas" col="1" ></Label>
 
-            <Label class="list-province" [nsRouterLink]="['/acknowledgement', village]" [text]="village" col="0" row="0"  pageTransition="slideRight" ></Label>
-
-            <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
-        </GridLayout>
-        </ng-template>
-        </ListView>
+                        </GridLayout>
+                    </ng-template>
+                </ListView>
             </ScrollView>
-    </StackLayout>>
-    </ng-template>
-</ListView>
-</StackLayout>
-<!-- <StackLayout row="1", col="0" colSpan="2">
-    <SearchBar  hint="Search"
-    color="white" backgroundColor="#dad6d6"
-    textFieldHintColor="yellow"
-    textFieldBackgroundColor="white"
-    class="search-bar"
-    ></SearchBar>
-</StackLayout> -->
-<StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
-    <Label text=" &#xf137;  Map View" class="fas" ></Label>
- </StackLayout>
- <StackLayout class ="dialogue" row="1", col="1" >
+                </ng-template>
+                </ListView>
 
-     <Label text=" List View  &#xf138; " class="fas" a></Label>
- </StackLayout>
-</GridLayout>
+          </FlexboxLayout>
+
+    <StackLayout row="1" orientation="horizontal">
+
+      <GridLayout columns="auto,auto,auto" >
+        <label col ="0" class="search-left" ></label>
+        <StackLayout class ="search-center"  col="1" >
+            <SearchBar  hint="Search KORO"
+            color="black" backgroundColor="#dad6d6"
+            textFieldHintColor="yellow"
+            textFieldBackgroundColor="white"
+
+            ></SearchBar>
+        </StackLayout>
+        <label col ="2" class ="search-right" ></label>
+      </GridLayout>
+
+    </StackLayout>
+  </GridLayout>
+
+
+
