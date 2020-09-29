@@ -14,7 +14,7 @@ export class SplachComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-       this.router.navigate(["/second-splash"], {clearHistory: true});
+      this.router.navigate(["/second-splash"], {clearHistory: true});
 
   },4000);
 
