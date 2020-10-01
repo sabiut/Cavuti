@@ -4,46 +4,62 @@ Learn more about the RadSideDrawer UI component and how it can be customized in 
 https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
 -->
 <RadSideDrawer   [drawerTransition]="sideDrawerTransition" >
-    <GridLayout  tkDrawerContent rows="auto, *" class="nt-drawer__content">
+    <GridLayout   tkDrawerContent rows="auto, *" class="nt-drawer__content">
         <StackLayout row="0" class="nt-drawer__header" class ="actionbar">
-            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf508;"></Image>
+            <Image class="nt-drawer__header-image fas t-36" src="font://"></Image>
             <Label class="nt-drawer__header-brand" text=""></Label>
             <!-- <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label> -->
         </StackLayout>
 
-        <ScrollView row="1" class="nt-drawer__body">
-            <StackLayout>
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
-                    <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
+        <ScrollView row="1"  class="nt-drawer__body">
+            <GridLayout columns="auto"  class ="sidedraw-background" >
+                <StackLayout  col="0" >
+                    <Image src="res://sideimage"  stretch="Fill" ></Image>
+                </StackLayout>
+
+                <StackLayout class ="sidedraw-menu" >
+
+                <GridLayout  columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+                    <!-- <Label col="0" text="&#xf015;" class="nt-icon fas"></Label> -->
+                    <Image  col ="0" width ="25" src="res://bureicon"  stretch="aspectFit" ></Image>
                     <Label col="1" text="HOME" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/about')" (tap)="onNavItemTap('/about')">
-                    <Label col="0" text="&#xf059;" class="nt-icon fas"></Label>
+                    <!-- <Label col="0" text="&#xf059;" class="nt-icon fas"></Label> -->
+                    <Image col ="0" width ="30" src="res://tabuacon"  stretch="aspectFit" ></Image>
                     <Label col="1" text="ABOUT US" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/contact')" (tap)="onNavItemTap('/contact')">
-                    <Label col="0" text="&#xf2b9;" class="nt-icon fas"></Label>
+                    <!-- <Label col="0" text="&#xf2b9;" class="nt-icon fas"></Label> -->
+                    <Image col ="0" width ="30"  src="res://davuiicon"  stretch="aspectFit" ></Image>
                     <Label col="1" text="CONTACT US" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
-                    <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
-                    <Label col="1" text="SEARCH" class="p-r-10"></Label>
-                </GridLayout>
-
-                <StackLayout class="hr"></StackLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
-                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                    <!-- <Label col="0" text="&#xf013;" class="nt-icon fas"></Label> -->
+                    <Image col ="0" width ="30" src="res://tanoaicon"  stretch="aspectFit" ></Image>
                     <Label col="1" text="CAVUTI" class="p-r-10"></Label>
                 </GridLayout>
+
+                <GridLayout class="drawer-switch" columns="1*,1*" rows="auto" >
+                    <label class = "english" row ="0" col ="0"  text="English"></label>
+                    <StackLayout row="0 "  col="1" >
+                      <Switch color="maroon" backgroundColor="maroon" offBackgroundColor="maroon" class="about-switch" checked="false" (checkedChange)="onCheckedChange($event)"></Switch>
+                    </StackLayout>
+                </GridLayout>
             </StackLayout>
+
+
+        </GridLayout>
+
         </ScrollView>
+
     </GridLayout>
 
-    <page-router-outlet tkMainContent >
+    <page-router-outlet   tkMainContent >
 
     </page-router-outlet>
 

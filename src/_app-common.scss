@@ -40,6 +40,8 @@
 // Drawer navigation custom styles
 .nt-drawer__header-image {
     color: const(grey);
+
+
 }
 
 .padding{
@@ -268,4 +270,24 @@ Button {
 
 .cavuti{
     padding-top: -200;
+}
+
+.sidedraw-menu{
+    padding-left: 40;
+
+
+}
+.sidedraw-background{
+    background-color:#D5CABB;
+}
+.drawer-switch{
+    padding-left: 20;
+    padding-top: 50;
+  justify-items: center;
+
+}
+.english{
+    padding-top: 15;
+    font-size: 18;
+    color: #5F0B10;
 }
