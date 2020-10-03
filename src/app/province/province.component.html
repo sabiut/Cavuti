@@ -21,7 +21,8 @@
 </ActionItem>
 
 </ActionBar>
-
+<GridLayout  id ="background-color">
+    
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
       <Image src="res://sideimage"  stretch="Fill" ></Image>
@@ -63,84 +64,8 @@
   </GridLayout>
 
 
+</GridLayout>
 
 
-
-
-
-
-
-<!--Testing Below-->
-<!-- <GridLayout columns="auto,*" rows="*,auto">
-
-    <StackLayout  col="0" row="0" >
-        <Image src="res://sideimage"  stretch="Fill" ></Image>
-    </StackLayout>
-
-    <StackLayout *ngIf="details"; then loggedIn >
-    </StackLayout>
-
-    <StackLayout  col="1" row="0" >
-
-
-
-    <ListView [items]="details" #logginIn >
-        <ng-template let-group="item" let-i="index" let-odd="odd" let-even="even">
-
-            <StackLayout>
-
-             <ScrollView orientation="horizontal">
-                <ListView [items]="group.province" height="1000" width="500">
-                <ng-template let-item="item">
-                <GridLayout android:useDefaultMargins="true" class="test" columns="1*, 1*" rows="1*,1*" width="500" height="50">
-
-                <Label class="list-province" [nsRouterLink]="['/district', item]" [text]="item" col="0" row="0"  pageTransition="slideRight"></Label>
-
-                <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1" row="0" ></Label>
-            </GridLayout>
-        </ng-template>
-        </ListView>
-        </ScrollView>
-        </StackLayout>
-        </ng-template>
-    </ListView>
-    </StackLayout>
-
-    <StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
-        <Label class="fas" ></Label>
-     </StackLayout>
-     <StackLayout class ="bottom-right" row="1", col="1" >
-
-         <Label  class="fas" ></Label>
-     </StackLayout> -->
-       <!-- <StackLayout row="1", col="0" colSpan="2">
-            <SearchBar  hint="Search"
-            color="white" backgroundColor="#dad6d6"
-            textFieldHintColor="yellow"
-            textFieldBackgroundColor="white"
-            class="search-bar"
-            ></SearchBar>
-        </StackLayout> -->
-<!--
-        <StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
-            <Label text=" &#xf137;  Map View" class="fas" ></Label>
-         </StackLayout>
-         <StackLayout class ="dialogue" row="1", col="1" >
-
-             <Label text=" List View  &#xf138; " class="fas" a></Label>
-         </StackLayout> -->
-
-         <!-- <ScrollableView>
-            <StackLayout  class ="dialogue1" row="1", col="0" colSpan="2">
-                <SearchBar  hint="Search() "
-                color="black" backgroundColor="#9B111E"
-                textFieldHintColor="yellow"
-                textFieldBackgroundColor="white"
-                class="search-bar"
-                ></SearchBar>
-            </StackLayout>
-        </ScrollableView> -->
-
-<!-- </GridLayout> -->
 
 

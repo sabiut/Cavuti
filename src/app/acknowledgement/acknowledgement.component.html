@@ -18,7 +18,7 @@
   </ActionItem>
 
 </ActionBar>
-
+<GridLayout id = "background-color">
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
       <Image src="res://sideimage"  stretch="Fill" ></Image>
@@ -43,24 +43,15 @@
 
           </FlexboxLayout>
 
-    <StackLayout row="1" orientation="horizontal">
-
-      <GridLayout columns="auto,auto,auto" >
-        <label col ="0" class="search-left" ></label>
-        <StackLayout class ="search-center"  col="1" >
-            <SearchBar  hint="Search KORO"
-            color="black" backgroundColor="#dad6d6"
-            textFieldHintColor="yellow"
-            textFieldBackgroundColor="white"
-
-            ></SearchBar>
-        </StackLayout>
-        <label col ="2" class ="search-right" ></label>
-      </GridLayout>
-
-    </StackLayout>
+         <StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
+            <Label class="fas" ></Label>
+         </StackLayout>
+         <StackLayout class ="bottom-right-ack" row="1", col="1" >
+        
+             <Label  class="fas" ></Label>
+         </StackLayout>
   </GridLayout>
-
+</GridLayout>
 
 
 

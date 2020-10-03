@@ -28,6 +28,7 @@
         font-size: 20;
         vertical-align: center;
         horizontal-align: center;
+        background-color:#D5CABB;
     }
 
     &-icon {
@@ -211,7 +212,13 @@
     background-color:#5F0B10;
     color: white;
 
+}
 
+.bottom-right-ack{
+    height:58;
+    background-color:#5F0B10;
+
+   
 
 }
 
@@ -278,6 +285,10 @@ Button {
 
 }
 .sidedraw-background{
+    background-color:#D5CABB;
+}
+
+#background-color{
     background-color:#D5CABB;
 }
 .drawer-switch{
