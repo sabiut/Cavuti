@@ -14,7 +14,7 @@ export class SecondSplashComponent implements OnInit {
 
     ngOnInit(): void {
             setTimeout(() => {
-            this.router.navigate(["/third-splash"], {clearHistory: true});
+            //this.router.navigate(["/third-splash"], {clearHistory: true});
           }, 6000);
 
           }

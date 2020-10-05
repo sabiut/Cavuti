@@ -218,7 +218,7 @@
     height:58;
     background-color:#5F0B10;
 
-   
+
 
 }
 
@@ -301,4 +301,29 @@ Button {
     padding-top: 15;
     font-size: 18;
     color: #5F0B10;
+}
+
+.image-alignment{
+    width: 241;
+    height: 241;
+    align-content: center;
+
+
+}
+
+.textColor{
+    color: white;
+    width: 60;
+    height: 60;
+    border-radius: 30;
+    text-align:center;
+    padding: 15;
+    font-size: 20;
+
+}
+.secondimage-alignment{
+
+    width: 263.32;
+    height: 79.15;
+    align-content: center;
 }
