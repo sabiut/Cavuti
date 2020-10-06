@@ -5,13 +5,14 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
 -->
 <RadSideDrawer   [drawerTransition]="sideDrawerTransition" >
     <GridLayout   tkDrawerContent rows="auto, *" class="nt-drawer__content">
-        <StackLayout row="0" class="nt-drawer__header" class ="actionbar">
+        <StackLayout  row="0" class="nt-drawer__header" class ="actionbar">
             <Image class="nt-drawer__header-image fas t-36" src="font://"></Image>
-            <Label class="nt-drawer__header-brand" text=""></Label>
+            <!-- <Label class="nt-drawer__header-brand" text=""></Label> -->
+
             <!-- <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label> -->
         </StackLayout>
 
-        <ScrollView row="1"  class="nt-drawer__body">
+        <ScrollView  row="1"  class="nt-drawer__body">
             <GridLayout columns="auto"  class ="sidedraw-background" >
                 <StackLayout  col="0" >
                     <Image src="res://sideimage"  stretch="Fill" ></Image>
@@ -19,32 +20,32 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
 
                 <StackLayout class ="sidedraw-menu" >
 
-                <GridLayout  columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+                <GridLayout id="push-image-down" columns="auto,*" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
                     <!-- <Label col="0" text="&#xf015;" class="nt-icon fas"></Label> -->
-                    <Image  col ="0" width ="25" src="res://bureicon"  stretch="aspectFit" ></Image>
-                    <Label col="1" text="HOME" class="p-r-10"></Label>
+                    <Image  class="home-icon" col ="0"  src="res://bureicon"  stretch="aspectFit" ></Image>
+                    <Label class="icon-names" col="1"  text="HOME" ></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/about')" (tap)="onNavItemTap('/about')">
+                <GridLayout id="push-image-down" columns="auto,*" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/about')" (tap)="onNavItemTap('/about')">
                     <!-- <Label col="0" text="&#xf059;" class="nt-icon fas"></Label> -->
-                    <Image col ="0" width ="30" src="res://tabuacon"  stretch="aspectFit" ></Image>
-                    <Label col="1" text="ABOUT US" class="p-r-10"></Label>
+                    <Image class="about-icon" col ="0"  src="res://tabuacon"  stretch="aspectFit" ></Image>
+                    <Label class="icon-names" col="1"  text="ABOUT US" ></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/contact')" (tap)="onNavItemTap('/contact')">
+                <GridLayout id="push-image-down" columns="auto, *"   class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/contact')" (tap)="onNavItemTap('/contact')">
                     <!-- <Label col="0" text="&#xf2b9;" class="nt-icon fas"></Label> -->
-                    <Image col ="0" width ="30"  src="res://davuiicon"  stretch="aspectFit" ></Image>
-                    <Label col="1" text="CONTACT US" class="p-r-10"></Label>
+                    <Image class ="contact-icon" col ="0"  src="res://davuiicon"  stretch="aspectFit" ></Image>
+                    <Label class="icon-names" col="1"  text="CONTACT US" ></Label>
                 </GridLayout>
 
 
-                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
+                <GridLayout id="push-image-down" columns="auto, *"  class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
                     <!-- <Label col="0" text="&#xf013;" class="nt-icon fas"></Label> -->
-                    <Image col ="0" width ="30" src="res://tanoaicon"  stretch="aspectFit" ></Image>
-                    <Label col="1" text="CAVUTI" class="p-r-10"></Label>
+                    <Image class="cavuti-icon" col ="0"  src="res://tanoaicon"  stretch="aspectFit" ></Image>
+                    <Label class="icon-names" col="1" text="CAVUTI" ></Label>
                 </GridLayout>
 
-                <GridLayout class="drawer-switch" columns="1*,1*" rows="auto" >
+                <GridLayout id="push-English-down" class="drawer-switch" columns="1*,1*" rows="auto" >
                     <label class = "english" row ="0" col ="0"  text="English"></label>
                     <StackLayout row="0 "  col="1" >
                       <Switch color="maroon" backgroundColor="maroon" offBackgroundColor="maroon" class="about-switch" checked="false" (checkedChange)="onCheckedChange($event)"></Switch>

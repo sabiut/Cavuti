@@ -12,21 +12,21 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="ABOUT US"></Label>
+    <Label class="regional-name" text="ABOUT US"></Label>
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
   </ActionItem>
 </ActionBar>
 
 <GridLayout id ="background-color">
-  
+
 <GridLayout cplumns="1*,*" rows="*,60">
   <StackLayout  col="0" row="0" >
     <Image src="res://sideimage"  stretch="Fill" ></Image>
 </StackLayout>
 
 <StackLayout class="about-title">
-  <Label text="About the app"></Label>
+  <Label id="about-head"  text="About the app"></Label>
 </StackLayout>
         <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
         <GridLayout>
@@ -45,11 +45,11 @@
 
   <StackLayout row="1" orientation="horizontal">
     <GridLayout columns="auto, auto, auto" >
-      <label col ="0" class="ab-left" text="English"></label>
+      <label id="bottom-bar-text" col ="0" class="ab-left" text="English"></label>
       <StackLayout class ="ab-center"  col="1" >
         <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="false" (checkedChange)="onCheckedChange($event)"></Switch>
       </StackLayout>
-      <label col ="2" class ="ab-right" text="Vosa Vokabau"></label>
+      <label id="bottom-bar-text" col ="2" class ="ab-right" text="Vosa Vokabau"></label>
     </GridLayout>
   </StackLayout>
 </GridLayout>

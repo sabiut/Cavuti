@@ -12,7 +12,7 @@
     <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="KORO"></Label>
+    <Label class="regional-name" text="KORO"></Label>
 
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
@@ -38,7 +38,7 @@
                 <ListView [items]="group.village" height="1000">
                     <ng-template let-village="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="500">
-                            <Label  col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
+                            <Label  class="confederacy" col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
                             <Label  text="&#xf054;" class="fas" col="1" ></Label>
 
                         </GridLayout>

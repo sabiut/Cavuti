@@ -38,15 +38,13 @@
     <ActionItem class= "actionbar" icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="right">
     </ActionItem>
-    <Label text="MATANITU"></Label>
+    <Label class="regional-name" text="MATANITU"></Label>
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
   </ActionItem>
 </ActionBar>
 
 <GridLayout class="page__content" id ="background-color">
-
-
 
     <GridLayout cplumns="1*,*" rows="*,60">
         <StackLayout  col="0" row="0" >
@@ -69,11 +67,11 @@
 
         <StackLayout row="1" orientation="horizontal">
           <GridLayout columns="auto, auto, auto" >
-            <label col ="0" class="ab-left" text="Map View"></label>
+            <label id="bottom-bar-text" col ="0" class="ab-left" text="Map View"></label>
             <StackLayout class ="ab-center"  col="1" >
               <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
             </StackLayout>
-            <label col ="2" class ="ab-right" text="List View"></label>
+            <label id="bottom-bar-text" col ="2" class ="ab-right" text="List View"></label>
           </GridLayout>
         </StackLayout>
       </GridLayout>

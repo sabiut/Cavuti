@@ -12,7 +12,7 @@
     <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="I CAVUTI"></Label>
+    <Label class="regional-name" text="I CAVUTI"></Label>
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
   </ActionItem>
@@ -32,10 +32,10 @@
             <ListView [items]="villageData" #logginIn >
             <ng-template let-group="item" >
                 <StackLayout>
-                    <Label class="list-province"  [text]="group.village_name"  ></Label>
+                    <Label class="confederacy"  [text]="group.village_name"  ></Label>
                     <StackLayout class="hr"></StackLayout>
-                        <GridLayout class="test"  columns="*, 80*" rows="1*, 1*"  height="50"  >
-                             <Label  textWrap="true"  class ="arrow-icon" text="{{group.acknowledgement}}" class="fas" col="1" row="0" ></Label>
+                        <GridLayout   >
+                             <Label   class ="confederacy" textWrap="true"   text="{{group.acknowledgement}}"  col="1" row="0" ></Label>
                         </GridLayout>
             </StackLayout>
                 </ng-template>
@@ -47,7 +47,7 @@
             <Label class="fas" ></Label>
          </StackLayout>
          <StackLayout class ="bottom-right-ack" row="1", col="1" >
-        
+
              <Label  class="fas" ></Label>
          </StackLayout>
   </GridLayout>

@@ -12,7 +12,7 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label text="CONTACT US"></Label>
+    <Label class="regional-name" text="CONTACT US"></Label>
 
     <ActionItem ios.position="right" os.position="right" class ="navigation" >
         <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
@@ -30,26 +30,26 @@
 <FlexboxLayout flexDirection="column">
     <StackLayout class = "contact-label">
 
-        <Label text="Ministry of Fijian Affairs"></Label>
+        <Label class="iside-text-box" text="Ministry of Fijian Affairs"></Label>
 
     </StackLayout>
     <StackLayout class ="contact-form">
-        <TextField hint = "Your First Name" returnKeyType="next"  required ngModel #fname ="ngModel"></TextField>
+        <TextField class="iside-text-box" hint = "Your First Name" returnKeyType="next"  required ngModel #fname ="ngModel"></TextField>
         <label
         *ngIf ="!fname.valid && fname.touched"
         text ="Please enter a valid first name"></label>
 
-        <TextField hint="Your Last Name" required ngModel #lname ="ngModel"></TextField>
+        <TextField  class="iside-text-box" hint="Your Last Name" required ngModel #lname ="ngModel"></TextField>
         <label
         *ngIf ="!lname.valid && lname.touched"
         text ="Please enter a valid last name"></label>
 
-        <TextField hint="Your Email"  keyboardType="email"  required ngModel #email="ngModel"></TextField>
+        <TextField class="iside-text-box" hint="Your Email"  keyboardType="email"  required ngModel #email="ngModel"></TextField>
         <label
         *ngIf ="!email.valid && email.touched"
         text ="Please enter a valid email address"></label>
 
-        <TextView hint="Type your message here"  returnKeyType="done" required ngModel #message="ngModel"></TextView>
+        <TextView class="iside-text-box" hint="Type your message here"  returnKeyType="done" required ngModel #message="ngModel"></TextView>
         <label *ngIf ="!message.valid && message.touched"
         text ="Please enter a valid message"></label>
 
