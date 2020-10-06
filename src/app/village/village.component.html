@@ -12,11 +12,12 @@
     <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
+    <ActionItem ios.position="right" os.position="right" >
+      <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
+    </ActionItem>
+
     <Label class="regional-name" text="KORO"></Label>
 
-    <ActionItem ios.position="right" os.position="right" class ="navigation" >
-        <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
-  </ActionItem>
 
 </ActionBar>
 

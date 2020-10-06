@@ -12,10 +12,12 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
+    <ActionItem ios.position="right" os.position="right" >
+      <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
+    </ActionItem>
+
     <Label class="regional-name" text="ABOUT US"></Label>
-    <ActionItem ios.position="right" os.position="right" class ="navigation" >
-        <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
-  </ActionItem>
+
 </ActionBar>
 
 <GridLayout id ="background-color">
@@ -29,10 +31,10 @@
   <Label id="about-head"  text="About the app"></Label>
 </StackLayout>
         <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
-        <GridLayout>
+        <GridLayout >
           <ListView [items]="details">
-          <ng-template let-item="item">
-              <GridLayout class="list-group-item" columns="*,auto">
+          <ng-template  let-item="item">
+              <GridLayout  columns="*,auto">
                  <Label col="0" textWrap="true" [text]="item.details" [visibility]="item.visible ? 'collapse' : 'visible'"></Label>
                  <Label col="0" textWrap="true" [text]="item.title" [visibility]="item.visible ? 'visible' : 'collapse'"></Label>
                  <Label col=1 text ="show" class="fas" [text]="item.visible ? '&#xf067;' : '&#xf068;'" (tap)="toggle(item)"></Label>
@@ -44,7 +46,7 @@
         </FlexboxLayout>
 
   <StackLayout row="1" orientation="horizontal">
-    <GridLayout columns="auto, auto, auto" >
+    <GridLayout columns="1*, 1*, 1*">
       <label id="bottom-bar-text" col ="0" class="ab-left" text="English"></label>
       <StackLayout class ="ab-center"  col="1" >
         <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="false" (checkedChange)="onCheckedChange($event)"></Switch>

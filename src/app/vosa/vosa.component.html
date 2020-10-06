@@ -12,10 +12,11 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
+    <ActionItem ios.position="right" os.position="right" >
+      <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
+    </ActionItem>
     <Label class="regional-name" text="ABOUT US"></Label>
-    <ActionItem ios.position="right" os.position="right" class ="navigation" >
-        <Label text="&#xf137;" class="nt-icon fas" nsRouterLink="/home"></Label>
-  </ActionItem>
+
 </ActionBar>
 
 <GridLayout id ="background-color">
@@ -24,14 +25,14 @@
     <Image src="res://sideimage"  stretch="Fill" ></Image>
 </StackLayout>
 <StackLayout class="about-title">
-  <Label id="about-head" text="iTukutuku me baleta na "></Label>
-  <Label id ="about-head" text ="Application qoka"></Label>
+  <Label id="about-head"  textWrap="true" text="iTukutuku me baleta na Application qoka"></Label>
 </StackLayout>
-        <FlexboxLayout class ="about-list"  col='1' row ='0' flexDirection="row">
+
+        <FlexboxLayout id="push-down-list" class ="about-list"  col='1' row ='0' flexDirection="row">
         <GridLayout >
-          <ListView  [items]="details">
+          <ListView  [items]="details" height="400">
           <ng-template let-item="item">
-              <GridLayout  class="list-group-item" columns="*,auto">
+              <GridLayout  class="list-group-item" columns="*,auto" >
                  <Label col="0" textWrap="true" [text]="item.details" [visibility]="item.visible ? 'collapse' : 'visible'"></Label>
                  <Label col="0" textWrap="true" [text]="item.title" [visibility]="item.visible ? 'visible' : 'collapse'"></Label>
                  <Label col=1 text ="show" class="fas" [text]="item.visible ? '&#xf067;' : '&#xf068;'" (tap)="toggle(item)"></Label>
@@ -43,12 +44,12 @@
         </FlexboxLayout>
 
   <StackLayout row="1" orientation="horizontal">
-    <GridLayout columns="auto, auto, auto" >
+    <GridLayout columns="1*, 1*, 1*" >
       <label id="bottom-bar-text" col ="0" class="ab-left" text="English"></label>
       <StackLayout class ="ab-center"  col="1" >
         <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
       </StackLayout>
-      <label id="bottom-bar-text" col ="2" class ="ab-right" text="Vosa Vokabau"></label>
+      <label id="bottom-bar-text"  col ="2" class ="ab-right" text="Vosa Vokabau"></label>
     </GridLayout>
   </StackLayout>
 </GridLayout>

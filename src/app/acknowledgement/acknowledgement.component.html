@@ -12,11 +12,13 @@
     <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label class="regional-name" text="I CAVUTI"></Label>
-    <ActionItem ios.position="right" os.position="right" class ="navigation" >
-        <Label text="&#xf002;" class="nt-icon fas" nsRouterLink="/search"></Label>
-  </ActionItem>
 
+    <ActionItem ios.position="right" os.position="right" >
+        <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
+      </ActionItem>
+      
+    <Label class="regional-name" text="I CAVUTI"></Label>
+ 
 </ActionBar>
 <GridLayout id = "background-color">
 <GridLayout cplumns="1*,*" rows="*,60">
