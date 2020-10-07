@@ -3,18 +3,18 @@
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
-    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
     <!--
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    <ActionItem icon="res://menu" android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
+    <ActionItem  os.position="left" icon="res://menu"  android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
 
 <ActionItem ios.position="right" os.position="right" >
-  <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
+  <Image  src="res://left_arrow"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
 </ActionItem>
 <Label class="regional-name" text="TIKINA"></Label>
 
@@ -36,9 +36,11 @@
                 <ScrollView>
                 <ListView [items]="group.province" height="900">
                     <ng-template let-item="item">
-                        <GridLayout class="list-group-item" columns="1*, 1*" width="500">
+                        <GridLayout class="list-group-item" columns="1*, 1*" width="400">
                             <Label class="confederacy" col ="0" [nsRouterLink]="['/district', item]" [text]= "item" pageTransition="slideleft" ></Label>
-                            <Label  text="&#xf054;" class="fas" col="1" ></Label>
+                            <!-- <Label  text="&#xf054;" class="fas" col="1" ></Label> -->
+                            <Image  src="res://right_arrow"  [nsRouterLink]="['/district', item]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
+
 
                         </GridLayout>
                     </ng-template>

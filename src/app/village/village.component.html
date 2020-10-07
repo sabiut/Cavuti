@@ -13,7 +13,7 @@
         ios.position="left">
     </ActionItem>
     <ActionItem ios.position="right" os.position="right" >
-      <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
+      <Image  src="res://left_arrow"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
     </ActionItem>
 
     <Label class="regional-name" text="KORO"></Label>
@@ -38,9 +38,11 @@
                 <ScrollView orientation="horizontal">
                 <ListView [items]="group.village" height="1000">
                     <ng-template let-village="item">
-                        <GridLayout class="list-group-item" columns="1*, 1*" width="500">
+                        <GridLayout class="list-group-item" columns="1*, 1*" width="400">
                             <Label  class="confederacy" col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
-                            <Label  text="&#xf054;" class="fas" col="1" ></Label>
+                            <!-- <Label  text="&#xf054;" class="fas" col="1" ></Label> -->
+                            <Image  src="res://right_arrow"  [nsRouterLink]="['/acknowledgement', village]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
+
 
                         </GridLayout>
                     </ng-template>

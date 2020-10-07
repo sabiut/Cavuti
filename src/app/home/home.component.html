@@ -3,7 +3,7 @@
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
-    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"
+    <NavigationButton ios:visibility="collapsed"  icon="res://menu" (tap)="onDrawerButtonTap()"
     android.position="right"></NavigationButton>
 
     <!--
@@ -11,8 +11,8 @@
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    <ActionItem   icon="res://menu"  android:visibility="collapsed" (tap)="onDrawerButtonTap()"
-        ios.position="left">
+    <ActionItem  class= "actionbar" icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="right">
     </ActionItem>
     <Label text="MATANITU"></Label>
 
@@ -26,13 +26,13 @@
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
-    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <NavigationButton ios:visibility="collapsed"  icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
     <!--
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    <ActionItem class= "actionbar" icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+    <ActionItem class= "actionbar"  icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="right">
     </ActionItem>
     <Label class="regional-name" text="MATANITU"></Label>
@@ -52,7 +52,8 @@
                 <ng-template let-item="item">
                     <GridLayout class="list-group-item" columns="*,auto">
                        <Label col ="0"  class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
-                       <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1"  ></Label>
+                       <!-- <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1"  ></Label> -->
+                       <Image  src="res://right_arrow" [nsRouterLink]="['/province', item.confederancy_name]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
 
                     </GridLayout>
                 </ng-template>
@@ -115,7 +116,7 @@
          <StackLayout class ="about-right" row="1", col="2" >
            <Label text=" List View " class="fas"></Label>
        </StackLayout>
-    <!-- <ScrollableView>
+     <ScrollableView>
         <StackLayout row="1", col="0" colSpan="2">
             <SearchBar  hint="Search"
             color="black" backgroundColor="#dad6d6"
