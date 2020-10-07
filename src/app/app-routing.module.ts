@@ -18,14 +18,20 @@ const routes: Routes = [
     {path: "village/:district", loadChildren: () => import("~/app/village/village.module").then((m) => m.VillageModule)},
     // tslint:disable-next-line: max-line-length
     {path: "acknowledgement/:village", loadChildren: () => import("~/app/acknowledgement/acknowledgement.module").then((m) => m.AcknowledgementModule)},
-    {path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule)},
+    {path: "cavuti", loadChildren: () => import("~/app/cavuti/cavuti.module").then((m) => m.CavuitModule)},
     {path: "message", loadChildren: () => import("~/app/contact/message/message.module").then((m) => m.MessageModule)},
     {path: "vosa", loadChildren: () => import("~/app/vosa/vosa.module").then((m) => m.VosaModule)},
     {path: "first-splash", loadChildren: () => import("~/app/splach/splach.module").then((m) => m.SplachModule)},
     // tslint:disable-next-line: max-line-length
     {path: "second-splash", loadChildren: () => import("~/app/splach/second-splash/second-splash.module").then((m) => m.SecondSplashModule)},
     // tslint:disable-next-line: max-line-length
-    {path: "third-splash", loadChildren: () => import("~/app/splach/third-splash/third-splash.module").then((m) => m.ThirdSplashModule)}
+    {path: "third-splash", loadChildren: () => import("~/app/splach/third-splash/third-splash.module").then((m) => m.ThirdSplashModule)},
+    // tslint:disable-next-line: max-line-length
+    {path: "cavutikadavu", loadChildren: () => import("~/app/cavuti/cavutikadavu/cavutikadavu.module").then((m) => m.CavutikadavuModule)},
+    // tslint:disable-next-line: max-line-length
+    {path: "cavutiyawe", loadChildren: () => import("~/app/cavuti/cavutiyawe/cavutiyawe.module").then((m) => m.CavutiyaweModule)},
+    // tslint:disable-next-line: max-line-length
+    {path: "cavutinalotu", loadChildren: () => import("~/app/cavuti/cavutinalotu/cavutinalotu.module").then((m) => m.CavutinalotuModule)}
 ];
 
 @NgModule({

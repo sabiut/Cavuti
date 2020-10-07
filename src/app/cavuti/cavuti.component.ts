@@ -1,16 +1,17 @@
 import { Component, OnInit } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
+import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
   selector: "ns-search",
-  templateUrl: "./search.component.html",
-  styleUrls: ["./search.component.css"],
+  templateUrl: "./cavuti.component.html",
+  styleUrls: ["./cavuti.component.css"],
   moduleId: module.id
 })
-export class SearchComponent implements OnInit {
+export class CavutiComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: RouterExtensions) { }
 
   ngOnInit(): void {
   }

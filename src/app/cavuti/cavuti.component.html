@@ -1,0 +1,77 @@
+
+<ActionBar class="actionbar">
+
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="regional-name" text="Cavuti"></Label>
+</ActionBar>
+
+<GridLayout class="page__content" id ="background-color">
+    <GridLayout columns="auto,*" rows="*,auto">
+        <StackLayout  col="0" row="0" >
+            <Image src="res://sideimage"  stretch="Fill" class="side-decoration"></Image>
+        </StackLayout>
+
+<StackLayout  col="1" row="0" >
+<FlexboxLayout flexDirection="column">
+    <StackLayout class = "contact-label">
+        <Label class="caviti-title" text="LOMA I YAWE"></Label>
+    </StackLayout>
+    <StackLayout class ="contact-form">
+       <Label class ="cavuti-content" textWrap="true" text="Vanua o Burbasaga vua na Marama Bale na Roko Tui Drekei"></Label>
+    </StackLayout>
+</FlexboxLayout>
+
+<StackLayout >
+    <GridLayout class="cavuti-button" columns="1*" rows="1*,1*,1*">
+      <Image class="img" col ="1" row ="0" src="res://left_arrow"  stretch="aspectFill"  ></Image>
+      <Image col="1" row ="1" src="res://right_arrow"  stretch="aspectFill" width="47.96" height="47.96" nsRouterLink="/cavutikadavu"></Image>
+      <Image col="1" row ="2" src="res://star_button_filled"  stretch="aspectFill" width="47.96" height="47.96"></Image>
+    </GridLayout>
+  </StackLayout>
+
+</StackLayout>
+
+
+
+<StackLayout class ="dialogue1" row="1", col="0"  alignItems="right" >
+    <Label  class="fas" ></Label>
+ </StackLayout>
+ <StackLayout class ="dialogue" row="1", col="1" >
+
+     <Label   class="fas"></Label>
+ </StackLayout>
+ <StackLayout class ="bottom-left" row="1", col="0"  alignItems="right" >
+    <Label class="fas" ></Label>
+ </StackLayout>
+ <StackLayout class ="bottom-right" row="1", col="1" >
+
+     <Label  class="fas" ></Label>
+ </StackLayout>
+</GridLayout>
+
+</GridLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

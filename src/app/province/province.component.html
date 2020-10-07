@@ -14,7 +14,7 @@
     </ActionItem>
 
 <ActionItem ios.position="right" os.position="right" >
-  <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
+  <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
 </ActionItem>
 <Label class="regional-name" text="TIKINA"></Label>
 

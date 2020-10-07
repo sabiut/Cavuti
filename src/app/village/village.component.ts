@@ -29,10 +29,16 @@ export class VillageComponent implements OnInit {
                         },
                         (error) => console.error(error)
                         );
-            })
+            });
 
             }
-
+    get canGoBack() {
+                return this.router.canGoBack();
+            }
+        
+    onGoBack() {
+                this.router.backToPreviousPage();
+            }
     onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>app.getRootView();
     sideDrawer.showDrawer();

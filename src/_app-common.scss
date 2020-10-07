@@ -102,7 +102,8 @@
 }
 .navigation{
     margin-top: 8;
-    width: 50;
+    width: 44.35;
+    height: 44.35;
     align-items: center;
 }
 
@@ -418,5 +419,37 @@ Button {
 
 }
 
+.cavuti-content{
+        font-family: "Roboto", "Roboto-Regular";
+        font-size: 50;
+        text-transform: "sentance";
+       margin-left: 2;
+     
+        text-justify: auto;
+       
+}
 
+.caviti-title{
+    font-family: "Roboto", "Roboto-Regular";
+    font-size: 25;
+    text-transform: "sentance";
+    color: black;
 
+}
+
+.side-decoration{
+    width:40;
+    height: 812;
+}
+
+.cavuti-button{
+    align-items: right;
+    margin-left:320;
+   
+}
+
+.img{
+    width:47.96;
+    height:47.96;
+    opacity:50;
+}

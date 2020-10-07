@@ -18,11 +18,17 @@ import { filter } from 'rxjs/operators';
 export class ProvinceComponent implements OnInit {
 
   details: FijiData;
-  //province: string;
-
   constructor(private route: ActivatedRoute, private router: RouterExtensions,
               private provinceservice: ProvincesService) {
 
+    }
+
+  get canGoBack() {
+        return this.router.canGoBack();
+    }
+
+  onGoBack() {
+        this.router.backToPreviousPage();
     }
 
   ngOnInit(): void {

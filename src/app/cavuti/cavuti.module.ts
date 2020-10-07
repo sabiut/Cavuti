@@ -2,16 +2,19 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { ProvincesService } from "../service/province.service";
 import { HomeMainService } from "../service/home.service";
-import { SearchRoutingModule } from "./search-routing.module";
-import { SearchComponent } from "./search.component";
+import { CavutiRoutingModule } from "../cavuti/cavuti-routing.module";
+import { CavutiComponent } from "../cavuti/cavuti.component";
+
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        SearchRoutingModule
+        CavutiRoutingModule
+
     ],
     declarations: [
-        SearchComponent
+        CavutiComponent
+
     ],
     schemas: [
         NO_ERRORS_SCHEMA
@@ -22,4 +25,4 @@ import { SearchComponent } from "./search.component";
 
   ]
 })
-export class SearchModule { }
+export class CavuitModule { }

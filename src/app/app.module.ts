@@ -25,6 +25,7 @@ import { FormsModule } from "@angular/forms";
     ],
     declarations: [
         AppComponent
+
      ],
     schemas: [
         NO_ERRORS_SCHEMA
