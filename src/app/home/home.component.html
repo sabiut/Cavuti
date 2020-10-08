@@ -48,12 +48,12 @@
 
               <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
               <GridLayout>
-                <ListView [items]="dataList">
+                <ListView  id="boarder" [items]="dataList">
                 <ng-template let-item="item">
-                    <GridLayout class="list-group-item" columns="*,auto">
+                    <GridLayout class="list-group-item" columns="*,auto" >
                        <Label col ="0"  class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
                        <!-- <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1"  ></Label> -->
-                       <Image  src="res://right_arrow" [nsRouterLink]="['/province', item.confederancy_name]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
+                       <Image  src="res://hollow_right_arrow" [nsRouterLink]="['/province', item.confederancy_name]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
 
                     </GridLayout>
                 </ng-template>

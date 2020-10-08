@@ -75,6 +75,8 @@
 
 }
 
+
+
 .btnBack{
     font-family: "Roboto", "Roboto-Regular";
     font-size: 20;
@@ -108,8 +110,8 @@
 }
 
 .list-navigation{
-    width: 44.35;
-    height: 44.35;
+    width: 7.39;
+    height: 14.78;
     align-items: center;
 }
 
@@ -429,8 +431,7 @@ Button {
         font-family: "Roboto", "Roboto-Regular";
         font-size: 50;
         text-transform: "sentance";
-       margin-left: 2;
-
+        margin-left: 7;
         text-justify: auto;
 
 }
@@ -459,4 +460,9 @@ Button {
     height:47.96;
 
 }
+
+#max-icon{
+    color: #5F0B10;
+}
+
 

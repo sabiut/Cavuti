@@ -35,7 +35,7 @@
               <GridLayout  class="list-group-item" columns="*,auto" >
                  <Label col="0" textWrap="true" [text]="item.details" [visibility]="item.visible ? 'collapse' : 'visible'"></Label>
                  <Label col="0" textWrap="true" [text]="item.title" [visibility]="item.visible ? 'visible' : 'collapse'"></Label>
-                 <Label col=1 text ="show" class="fas" [text]="item.visible ? '&#xf067;' : '&#xf068;'" (tap)="toggle(item)"></Label>
+                 <Label col=1 id="max-icon" text ="show" class="fas" [text]="item.visible ? '&#xf067;' : '&#xf068;'" (tap)="toggle(item)"></Label>
 
               </GridLayout>
           </ng-template>
