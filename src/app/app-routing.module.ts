@@ -31,7 +31,8 @@ const routes: Routes = [
     // tslint:disable-next-line: max-line-length
     {path: "cavutiyawe", loadChildren: () => import("~/app/cavuti/cavutiyawe/cavutiyawe.module").then((m) => m.CavutiyaweModule)},
     // tslint:disable-next-line: max-line-length
-    {path: "cavutinalotu", loadChildren: () => import("~/app/cavuti/cavutinalotu/cavutinalotu.module").then((m) => m.CavutinalotuModule)}
+    {path: "cavutinalotu", loadChildren: () => import("~/app/cavuti/cavutinalotu/cavutinalotu.module").then((m) => m.CavutinalotuModule)},
+    {path: "map", loadChildren: () => import("~/app/map/map.module").then((m) => m.MapModule)}
 ];
 
 @NgModule({

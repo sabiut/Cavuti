@@ -8,6 +8,7 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { FormsModule } from "@angular/forms";
+import { MapComponent } from './map/map.component';
 
 @NgModule({
     bootstrap: [
@@ -24,7 +25,8 @@ import { FormsModule } from "@angular/forms";
 
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        MapComponent
 
      ],
     schemas: [
