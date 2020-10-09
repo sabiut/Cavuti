@@ -13,15 +13,18 @@
         ios.position="left">
     </ActionItem>
 
-    <ActionItem ios.position="right" os.position="right" >
+    <ActionItem  ios.position="right" os.position="right" >
       <Image  src="res://left_arrow"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
     </ActionItem>
-    <Label class="regional-name" text="YASANA"></Label>
-
+    <Label class="regional-name" text=""></Label>
 
 </ActionBar>
 
+
+
 <GridLayout id = "background-color">
+
+  <Label class="regional-names" text="YASANA"></Label>
 
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
@@ -36,7 +39,7 @@
             <ListView [items]="districtData" #logginIn >
             <ng-template let-group="item" >
                 <ScrollView orientation="horizontal">
-                <ListView [items]="group.district" height="1000">
+                <ListView separatorColor="gray" [items]="group.district" height="1000">
                     <ng-template let-district="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="430">
                             <Label  class="confederacy" col ="0" [nsRouterLink]="['/village', district]" [text]= "district" pageTransition="slideleft" ></Label>
@@ -53,22 +56,34 @@
 
           </FlexboxLayout>
 
-    <StackLayout row="1" orientation="horizontal">
+    <!-- <StackLayout row="1" orientation="horizontal">
 
       <GridLayout columns="auto,auto,auto" >
         <label col ="0" class="search-left" ></label>
-        <StackLayout class ="search-center"  col="1" >
-            <SearchBar  hint="Search Yasana"
+        <StackLayout class ="search-center"  col="1" > -->
+            <!-- <SearchBar  hint="Search Yasana"
             color="black" backgroundColor="#dad6d6"
             textFieldHintColor="#D5CABB"
             textFieldBackgroundColor="#D5CABB"
 
-            ></SearchBar>
-        </StackLayout>
+            ></SearchBar> -->
+        <!-- </StackLayout>
         <label col ="2" class ="search-right" ></label>
       </GridLayout>
 
+    </StackLayout> -->
+
+
+    <StackLayout row="1" orientation="horizontal">
+      <GridLayout columns="auto, auto, auto" >
+        <label id="bottom-bar-text" col ="0" class="ab-left" text="Map View"></label>
+        <StackLayout class ="ab-center"  col="1" >
+          <Switch color="white" backgroundColor="white" offBackgroundColor="white" class="about-switch" checked="true" (checkedChange)="onCheckedChange($event)"></Switch>
+        </StackLayout>
+        <label id="bottom-bar-text" col ="2" class ="ab-right" text="List View"></label>
+      </GridLayout>
     </StackLayout>
+
   </GridLayout>
 
 </GridLayout>

@@ -308,6 +308,7 @@ Button {
 
 .list-content{
     padding-left: 50;
+    padding-top: 40;
 }
 
 
@@ -374,8 +375,19 @@ Button {
     text-transform: uppercase;
     font-size: 35;
     font-weight: bold;
-    color: #D5CABB;
+    margin-left: 80;
+    margin-top: 0;
 }
+
+.regional-names{
+    font-family: "Roboto", "Roboto-Bold";
+    text-transform: uppercase;
+    font-size: 35;
+    font-weight: bold;
+    margin-left: 65;
+    margin-top: 0;
+}
+
 
 .home-icon{
     width: 45.8;
@@ -471,4 +483,16 @@ Button {
     color: #5F0B10;
 }
 
+#village-name{
+    font-family: "Roboto", "Roboto-Regular";
+    font-size: 18;
+    text-transform: "lowercase";
+    color: #5F0B10;
+}
+
+#r{
+    width: 54;
+    height: 54;
+    padding-left: 50;
+}
 

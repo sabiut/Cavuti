@@ -36,11 +36,21 @@ export class ThirdSplashComponent implements OnInit {
         let isChecked = sw.checked;
         if (isChecked) {
             this.router.navigate(["/home"]);
-            
+
         } else {
-            this.router.navigate(["/map"]);
+            this.errorMessage()
+            //this.router.navigate(["/map"]);
         }
 
 }
+
+  errorMessage(): void {
+    dialogs.alert({
+        message: "Sorry we are yet to have data for the Matanitu you have selected. However wer are working hard at getting this information in the near future.",
+        okButtonText: "OK"
+    }).then(() => {
+        console.log("Dialog closed!");
+    });
+  }
 
 }

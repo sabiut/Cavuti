@@ -16,11 +16,14 @@
     <ActionItem ios.position="right" os.position="right" >
         <Image  src="res://left_arrow"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
       </ActionItem>
-      
-    <Label class="regional-name" text="I CAVUTI"></Label>
- 
+
+    <Label class="regional-name" text=""></Label>
+
 </ActionBar>
 <GridLayout id = "background-color">
+
+    <Label class="regional-names" text="I CAVUTI"></Label>
+
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
       <Image src="res://sideimage"  stretch="Fill" ></Image>
@@ -34,8 +37,7 @@
             <ListView [items]="villageData" #logginIn >
             <ng-template let-group="item" >
                 <StackLayout>
-                    <Label class="confederacy"  [text]="group.village_name"  ></Label>
-                    <StackLayout class="hr"></StackLayout>
+                    <Label class="confederacy" id="village-name" [text]="group.village_name"  ></Label>
                         <GridLayout   >
                              <Label   class ="confederacy" textWrap="true"   text="{{group.acknowledgement}}"  col="1" row="0" ></Label>
                         </GridLayout>

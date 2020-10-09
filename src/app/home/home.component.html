@@ -14,7 +14,7 @@
     <ActionItem  class= "actionbar" icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="right">
     </ActionItem>
-    <Label text="MATANITU"></Label>
+    <Label text=""></Label>
 
 
 </ActionBar>
@@ -35,11 +35,13 @@
     <ActionItem class= "actionbar"  icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="right">
     </ActionItem>
-    <Label class="regional-name" text="MATANITU"></Label>
+    <Label class="regional-name" text=""></Label>
 
 </ActionBar>
 
 <GridLayout class="page__content" id ="background-color">
+
+    <Label class="regional-name" text="MATANITU"></Label>
 
     <GridLayout cplumns="1*,*" rows="*,60">
         <StackLayout  col="0" row="0" >
@@ -47,8 +49,10 @@
       </StackLayout>
 
               <FlexboxLayout class ="about-list" col='1' row ='0' flexDirection="row">
+
               <GridLayout>
-                <ListView  id="boarder" [items]="dataList">
+
+                <ListView id="seperator" separatorColor="gray" [items]="dataList">
                 <ng-template let-item="item">
                     <GridLayout class="list-group-item" columns="*,auto" >
                        <Label col ="0"  class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>

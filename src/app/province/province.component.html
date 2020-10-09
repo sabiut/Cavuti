@@ -3,23 +3,35 @@
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
-    <NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu"  id="r" (tap)="onDrawerButtonTap()"></NavigationButton>
     <!--
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    <ActionItem  os.position="left" icon="res://menu"  android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
-        ios.position="left">
+    <ActionItem os.position="right"   icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+    android.position="right">
     </ActionItem>
 
-<ActionItem ios.position="right" os.position="right" >
+
+
+    <ActionItem  os.position="right" icon="res://menu"  android:visibility="collapsed"  (tap)="onDrawerButtonTap()"
+        ios.position="right">
+    </ActionItem>
+
+    <ActionItem ios.position="right" os.position="right" >
+      <Image  src="res://left_arrow"  stretch="aspectFill"   class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
+    </ActionItem>
+
+<!-- <ActionItem ios.position="right" os.position="right" >
   <Image  src="res://left_arrow"  stretch="aspectFill"  class="navigation" *ngIf="canGoBack" (tap)="onGoBack()"></Image>
-</ActionItem>
-<Label class="regional-name" text="TIKINA"></Label>
+</ActionItem> -->
+<Label class="regional-name" text=""></Label>
 
 </ActionBar>
 <GridLayout  id ="background-color">
+
+  <Label class="regional-names" text="TIKINA"></Label>
 
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
@@ -34,7 +46,7 @@
             <ng-template let-group="item" >
                 <StackLayout>
                 <ScrollView>
-                <ListView [items]="group.province" height="900">
+                <ListView separatorColor="gray" [items]="group.province" height="900">
                     <ng-template let-item="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="430">
                             <Label class="confederacy" col ="0" [nsRouterLink]="['/district', item]" [text]= "item" pageTransition="slideleft" ></Label>
