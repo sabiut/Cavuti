@@ -39,10 +39,10 @@
             <ListView [items]="districtData" #logginIn >
             <ng-template let-group="item" >
                 <ScrollView orientation="horizontal">
-                <ListView separatorColor="gray" [items]="group.district" height="1000">
+                <ListView  [items]="group.district" height="1000">
                     <ng-template let-district="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="430">
-                            <Label  class="confederacy" col ="0" [nsRouterLink]="['/village', district]" [text]= "district" pageTransition="slideleft" ></Label>
+                            <Label  class="place-names" col ="0" [nsRouterLink]="['/village', district]" [text]= "district" pageTransition="slideleft" ></Label>
                             <!-- <Label  text="&#xf054;" class="fas" col="1" ></Label> -->
                             <Image  src="res://hollow_right_arrow"   [nsRouterLink]="['/village', district]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
 

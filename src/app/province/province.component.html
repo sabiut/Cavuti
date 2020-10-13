@@ -46,10 +46,10 @@
             <ng-template let-group="item" >
                 <StackLayout>
                 <ScrollView>
-                <ListView separatorColor="gray" [items]="group.province" height="900">
+                <ListView  [items]="group.province" height="900">
                     <ng-template let-item="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="430">
-                            <Label class="confederacy" col ="0" [nsRouterLink]="['/district', item]" [text]= "item" pageTransition="slideleft" ></Label>
+                            <Label class="place-names" col ="0" [nsRouterLink]="['/district', item]" [text]= "item" pageTransition="slideleft" ></Label>
                             <!-- <Label  text="&#xf054;" class="fas" col="1" ></Label> -->
                             <Image  src="res://hollow_right_arrow"  [nsRouterLink]="['/district', item]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
                         </GridLayout>

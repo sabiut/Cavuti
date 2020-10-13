@@ -24,7 +24,7 @@
 <GridLayout id = "background-color">
 
 
-  <Label class="regional-name" text="KORO"></Label>
+  <Label class="regional-names" text="KORO"></Label>
 
 <GridLayout cplumns="1*,*" rows="*,60">
     <StackLayout  col="0" row="0" >
@@ -43,10 +43,10 @@
 
                 <ScrollView orientation="horizontal">
 
-                <ListView separatorColor="gray" [items]="group.village" height="1000">
+                <ListView  [items]="group.village" height="1000">
                     <ng-template let-village="item">
                         <GridLayout class="list-group-item" columns="1*, 1*" width="430">
-                            <Label  class="confederacy" col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
+                            <Label  class="place-names" col ="0" [nsRouterLink]="['/acknowledgement', village]" [text]= "village" pageTransition="slideleft" ></Label>
                             <!-- <Label  text="&#xf054;" class="fas" col="1" ></Label> -->
                             <Image  src="res://hollow_right_arrow"  [nsRouterLink]="['/acknowledgement', village]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
 

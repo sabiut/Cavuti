@@ -8,7 +8,6 @@ import { EventData } from "tns-core-modules/data/observable";
 import { Switch } from "tns-core-modules/ui/switch";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 
-
 @Component({
     selector: "Home",
     templateUrl: "./home.component.html",
@@ -17,20 +16,19 @@ import * as dialogs from "tns-core-modules/ui/dialogs";
 export class HomeComponent implements OnInit {
 
     dataList: Array<FijiData> = [];
-
-
     constructor(private router: RouterExtensions, private dataservices: HomeMainService) {
 
     }
 
     ngOnInit(): void {
-       this.dataservices.getInfo().subscribe(
-          (data: Array<FijiData>) => {
-              this.dataList = data;
-              console.log(this.dataList);
-          },
+        this.dataservices.getInfo().subscribe(
+                (data: Array<FijiData>) => {
+                this.dataList = data;
+                console.log(this.dataList);
+            },
            (error: any) => console.log(error)
        );
+
     }
 
     onDrawerButtonTap(): void {
@@ -45,7 +43,7 @@ export class HomeComponent implements OnInit {
             this.router.navigate(["/home"]);
 
         } else {
-            this.errorMessage()
+            this.errorMessage();
             //this.router.navigate(["/map"]);
         }
 
@@ -59,4 +57,5 @@ export class HomeComponent implements OnInit {
             console.log("Dialog closed!");
         });
       }
+
 }

@@ -16,7 +16,7 @@
       <Image  src="res://back_button"  stretch="aspectFill"  class="navigation" nsRouterLink="/home"></Image>
     </ActionItem>
 
-    <Label class="regional-name" text="ABOUT US"></Label>
+    <Label class="regional-name" text=""></Label>
 
 </ActionBar>
 
@@ -34,11 +34,11 @@
         <GridLayout >
           <ListView [items]="details">
           <ng-template  let-item="item">
-              <GridLayout  columns="*,auto">
-                 <Label col="0" textWrap="true" [text]="item.details" [visibility]="item.visible ? 'collapse' : 'visible'"></Label>
-                 <Label col="0" textWrap="true" [text]="item.title" [visibility]="item.visible ? 'visible' : 'collapse'"></Label>
+              <GridLayout  class="list-group-item" columns="*,auto">
+                 <Label col="0" textWrap="true" id ="about-body" [text]="item.details" [visibility]="item.visible ? 'collapse' : 'visible'"></Label>
+                 <Label col="0" textWrap="true" id ="about-list" [text]="item.title" [visibility]="item.visible ? 'visible' : 'collapse'"></Label>
                  <Label col=1 id="max-icon" text ="show" class="fas" [text]="item.visible ? '&#xf067;' : '&#xf068;'" (tap)="toggle(item)"></Label>
-  
+
               </GridLayout>
           </ng-template>
           </ListView>

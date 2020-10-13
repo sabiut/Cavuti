@@ -68,10 +68,11 @@
 
 }
 
-.confederacy{
-    font-family: "Roboto", "Roboto-Regular";
-    text-transform: "sentance";
+.place-names{
+    font-family: "Roboto", "Roboto-Bold";
+    text-transform: "uppercase";
     font-size: 20;
+    color:#434142;
     padding-right: 10;
 
 }
@@ -83,7 +84,7 @@
     font-size: 20;
     text-transform: "sentance";
     background:#5F0B10;
-    color: white;
+    color:#D5CBBC;
     border-radius: 5;
 
 }
@@ -93,7 +94,7 @@
     text-transform: "sentance";
     border-radius: 5;
     background: #5F0B10;
-    color: white;
+    color:#D5CBBC;
 }
 
 .contactAlign{
@@ -170,19 +171,35 @@
 }
 
 #about-head{
-    font-family: "Roboto", "Roboto-Regular";
-    font-size: 30;
+    font-family: "Roboto", "Roboto-Bold";
+    font-size: 35;
     font-weight: bold;
     text-transform: "sentance";
+    color:#434142;
 }
 .about-list{
-    font-family: "Roboto", "Roboto-Regular";
     font-size: 20;
-    text-transform: "sentance";
     padding-right: 30;
     padding-bottom: 60;
     padding-top: 20;
 
+}
+
+#about-list{
+    font-family: "Roboto", "Roboto-bold";
+    font-size: 20;
+    text-transform: "sentence";
+    font-weight: bold;
+    color: #434142;
+
+}
+
+#about-body{
+    font-family: "Roboto", "Roboto-Regular";
+    font-size: 15;
+    text-transform: "sentence";
+    color: #434142;
+   
 
 }
 
@@ -219,14 +236,17 @@
     padding-top: 15;
 }
 
-
+ListView {
+    separator-color: transparent;
+  }
 
 .list-group-item{
     padding-right: 2;
+    border-color:grayscale($color:gray);
+    border-bottom-width:2
+    
 }
-
-
-
+    
 .ng-invalid.ng-touched{
     border-bottom-color: red;
     color: red;
@@ -375,6 +395,8 @@ Button {
     text-transform: uppercase;
     font-size: 35;
     font-weight: bold;
+    color:#434142;
+    line-height: 40;
     margin-left: 80;
     margin-top: 0;
 }
@@ -383,11 +405,22 @@ Button {
     font-family: "Roboto", "Roboto-Bold";
     text-transform: uppercase;
     font-size: 35;
+    color:#434142;
     font-weight: bold;
-    margin-left: 65;
+    margin-left: 70;
     margin-top: 0;
 }
 
+.acknowledgement-title{
+    font-family: "Roboto", "Roboto-Bold";
+    text-transform: uppercase;
+    font-size: 35;
+    color:#434142;
+    font-weight: bold;
+    margin-left: 66;
+    margin-top: 0;
+
+}
 
 .home-icon{
     width: 45.8;
@@ -418,7 +451,7 @@ Button {
     font-family: "Roboto", "Roboto-Regular";
     text-transform: uppercase;
     font-size: 17;
-    text-transform: "sentance";
+    line-height: 20;
     margin-left: 40;
 }
 
@@ -435,6 +468,7 @@ Button {
     font-family: "Roboto", "Roboto-Regular";
     font-size: 17;
     text-transform: "sentance";
+    color:#D5CBBC;
 
 }
 
@@ -449,16 +483,18 @@ Button {
         font-family: "Roboto", "Roboto-Regular";
         font-size: 50;
         text-transform: "sentance";
-        margin-left: 7;
-        text-justify: auto;
+        margin-left: 11;
+        color:#434142;
+        
 
 }
 
 .caviti-title{
-    font-family: "Roboto", "Roboto-Regular";
-    font-size: 25;
+    font-family: "Roboto", "Roboto-Bold";
+    font-size: 35;
+    font-weight: bold;
     text-transform: "sentance";
-    color: black;
+    color:#434142;
 
 }
 
@@ -486,13 +522,16 @@ Button {
 #village-name{
     font-family: "Roboto", "Roboto-Regular";
     font-size: 18;
-    text-transform: "lowercase";
-    color: #5F0B10;
+    text-transform: "sentence";
+    color:#5F0C12;
 }
 
-#r{
-    width: 54;
-    height: 54;
-    padding-left: 50;
+#btn-back{
+    opacity: 0.5;
 }
+
+
+
+
+
 

@@ -52,10 +52,10 @@
 
               <GridLayout>
 
-                <ListView id="seperator" separatorColor="gray" [items]="dataList">
+                <ListView [items]="dataList"    >
                 <ng-template let-item="item">
-                    <GridLayout class="list-group-item" columns="*,auto" >
-                       <Label col ="0"  class="confederacy" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
+                    <GridLayout class="list-group-item" columns="*,auto"  height="100">
+                       <Label  col ="0"  class="place-names" [nsRouterLink]="['/province', item.confederancy_name]" [text]= "item.confederancy_name" pageTransition="slideLeft" ></Label>
                        <!-- <Label class ="arrow-icon" text="&#xf054;" class="fas" col="1"  ></Label> -->
                        <Image  src="res://hollow_right_arrow" [nsRouterLink]="['/province', item.confederancy_name]" stretch="aspectFill"  class="list-navigation" col="1" ></Image>
 
